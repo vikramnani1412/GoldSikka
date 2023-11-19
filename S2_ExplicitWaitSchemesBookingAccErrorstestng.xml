@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Suite">
+  <test thread-count="1" parallel="tests" name="Test">
+  <groups>
+  <run>
+  <include name="expSchemes"></include>
+  <include name="expBookingAccount"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SchemesUsingExplicitWaitsErrors_StgTest"/>
+      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountUsingExplicitWaitsErrors_StgTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="S1_Suite">
+  <test thread-count="1" parallel="tests" name="Test">
+  <groups>
+  <run>
+  <include name="Scheme"></include>
+  <include name="Withdraw"></include>
+  <include name="BookingAccount"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="S1_Demo_Folder.Demo_CreateAnAccountLoginSchemeSubscriptionWithBankingAndBookingAccLogoutTest"/>
+      <class name="S1_Demo_Folder.Ok_Demo_LoginBookingAccountDepositMoneyTest"/>
+      <class name="S1_Demo_Folder.MoneyWithdrawlTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- S1_Suite -->
