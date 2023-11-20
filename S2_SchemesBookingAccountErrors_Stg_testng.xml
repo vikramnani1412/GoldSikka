@@ -3,14 +3,14 @@
 <suite thread-count="1" parallel="tests" name="Suite">
   <test thread-count="1" parallel="tests" name="Test">
   <groups>
-  <run>
-  <include name="Schemes"></include>
-  <include name="BookingAccount"></include>
-  </run>
+	<run>
+	  <include name="Schemes"></include>
+	  <include name="BookingAccount"></include>
+	</run>
   </groups>
     <classes>
-      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SchemesErrors_StgTest"/>
       <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors"/>
+      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SchemesErrors_StgTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

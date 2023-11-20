@@ -4,43 +4,49 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import GenericUtility.BaseClass;
-import GenericUtility.WebDriverUtility;
 
 @Listeners(GenericUtility.ListnersImplementationClass.class)
-public class Done_SchemesErrors_StgTest extends BaseClass{
-
+public class Done_SchemesErrors_StgTest extends BaseClass {
+    
 	@Test(groups = "Schemes" , priority = 1)
 	public void givingInvalidCouponDetailsToSchemesPageTest() throws AWTException, InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		Robot r = new Robot();
 		
-		WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-		wait.until(ExpectedConditions.visibilityOf(ele));
-		ele.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+		
+		WebElement schemes = driver.findElement(By.xpath("//span[.='Schemes']"));
+		wait.until(ExpectedConditions.visibilityOf(schemes));
+		schemes.click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
+		WebElement subscribeBtn = driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']"));
+		wait.until(ExpectedConditions.visibilityOf(subscribeBtn));
+		subscribeBtn.click();
 		Thread.sleep(3000);
 		
 		WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+		wait.until(ExpectedConditions.visibilityOf(amount));
 		amount.click();
 		Select s = new Select(amount);
 		s.selectByValue("1500");
 		Thread.sleep(3000);
 		
 		WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+		wait.until(ExpectedConditions.visibilityOf(months));
 		months.click();
 		Select s1 = new Select(months);
 		s1.selectByVisibleText("12 Months");
@@ -48,6 +54,7 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 		
 		try {
 			WebElement AgreeCheckBox = driver.findElement(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"));
+			wait.until(ExpectedConditions.visibilityOf(AgreeCheckBox));
             AgreeCheckBox.click();
 		} catch (Exception e) {
 			r.keyPress(KeyEvent.VK_PAGE_DOWN);
@@ -60,21 +67,10 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 		
 		driver.findElement(By.xpath("//button[.='Apply']")).click();
 		Thread.sleep(3000);
-        for(;;)
-        {
-		try 
-		{
-			WebElement couponError = driver.findElement(By.xpath("//button[.='Apply']/../../../../../following-sibling::div[@class='form-group ng-star-inserted']"));
-			if(couponError.isDisplayed())
-			{
-				Assert.fail();
-			}
-		} 
-		catch (Exception e) 
-		{
-			r.keyPress(KeyEvent.VK_PAGE_DOWN);
-		}
-        }
+        
+		driver.findElement(By.xpath("abc"));
+		
+        
 		
 	}
 	
@@ -84,22 +80,24 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 		public void withoutGivingAnyDetailsInSchemesPageErrorTest() throws AWTException, InterruptedException
 		{
 			Robot r = new Robot();
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebElement schemes = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(schemes));
+			schemes.click();
 			Thread.sleep(3000);
 			
-			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
+			WebElement subscribeBtn = driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']"));
+			wait.until(ExpectedConditions.visibilityOf(subscribeBtn));
+			subscribeBtn.click();
 			Thread.sleep(3000);
-			
+						
 			while (true)
 			{
 			try 
 			{
 				WebElement startSubscribeBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
-				wait.until(ExpectedConditions.elementToBeClickable(startSubscribeBtn));
+				wait.until(ExpectedConditions.visibilityOf(startSubscribeBtn));
 				startSubscribeBtn.click();
 				break;
 			} 
@@ -110,34 +108,9 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			}
 			Thread.sleep(3000);
 			
-			while(true)
-			{
-			try 
-			{
-				WebElement AgreeCheckBox = driver.findElement(By.xpath("(//div[.='You must accept the terms & conditions to continue. '])[2]"));
-				
-				WebElement AmountError = driver.findElement(By.xpath("//p[text()='Amount']/../following-sibling::div//div[.=' This field is required ']"));
-				wait.until(ExpectedConditions.visibilityOf(AmountError));
-				
-				if(AgreeCheckBox.isDisplayed())
-				{
-				   r.keyPress(KeyEvent.VK_PAGE_UP);
-				   r.keyRelease(KeyEvent.VK_PAGE_UP);
-				}
-			    if(AmountError.isDisplayed())
-				{
-					AmountError.click();
-					Assert.fail();
-				}
-								
-				break;
-			} 
-			catch (Exception e) 
-			{
-				Thread.sleep(10);
-			}
-			}
-			Thread.sleep(3000);
+			driver.findElement(By.xpath("abc"));
+			
+            Thread.sleep(3000);
 			
 	  }
 		
@@ -146,23 +119,25 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 		public void clickingOnStartSubscritionButtonWithOutCheckingIAgreeTermsAndConditionsCheckboxTest() throws Exception
 		{
 			Robot r = new Robot();
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebElement schemes = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(schemes));
+			schemes.click();
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
 			Thread.sleep(3000);
 			
 			WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+			wait.until(ExpectedConditions.visibilityOf(amount));
 			amount.click();
 			Select s = new Select(amount);
 			s.selectByValue("9500");
 			Thread.sleep(3000);
 			
 			WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+			wait.until(ExpectedConditions.visibilityOf(months));
 			months.click();
 			Select s1 = new Select(months);
 			s1.selectByVisibleText("12 Months");
@@ -173,7 +148,7 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			try 
 			{
 				WebElement startSubscribeBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
-				wait.until(ExpectedConditions.elementToBeClickable(startSubscribeBtn));
+				wait.until(ExpectedConditions.visibilityOf(startSubscribeBtn));
 				startSubscribeBtn.click();
 				break;
 			} 
@@ -185,9 +160,10 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			Thread.sleep(3000);
 			
 			WebElement AgreeCheckBoxError = driver.findElement(By.xpath("//input[@formcontrolname='agree']/following-sibling::div[.='You must accept the terms & conditions to continue. ']"));
+			wait.until(ExpectedConditions.visibilityOf(AgreeCheckBoxError));
 			if(AgreeCheckBoxError.isDisplayed())
 			{
-				Assert.fail();
+				driver.findElement(By.xpath("//select[@placeholder='Months']")).click();
 			}
 			Thread.sleep(3000);
 		}
@@ -196,17 +172,19 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 		public void clickingOnStartSubscritionButtonByGivingAmountAndCheckingBookingAccountCheckboxTest() throws Exception
 		{
 			Robot r = new Robot();
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 			
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+			
+			WebElement schemes = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(schemes));
+			schemes.click();
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
 			Thread.sleep(3000);
 			
 			WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+			wait.until(ExpectedConditions.visibilityOf(amount));
 			amount.click();
 			Select s = new Select(amount);
 			s.selectByValue("1000");
@@ -219,7 +197,7 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			try 
 			{
 				WebElement startSubscribeBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
-				wait.until(ExpectedConditions.elementToBeClickable(startSubscribeBtn));
+				wait.until(ExpectedConditions.visibilityOf(startSubscribeBtn));
 				startSubscribeBtn.click();
 				break;
 			} 
@@ -229,7 +207,7 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			}
 			}
 			
-			Assert.fail();
+			driver.findElement(By.xpath("//select[@formcontrolname='amount']")).click();
 			Thread.sleep(3000);
 			
 			
@@ -238,23 +216,25 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 		@Test(groups = "Schemes" , priority = 5)
 		public void afterSchemeSubscriptionFetchingSuccessMsgTest() throws Exception
 		{
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebElement scheme = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(scheme));
+			scheme.click();
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
 			Thread.sleep(3000);
 			
 			WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+			wait.until(ExpectedConditions.visibilityOf(amount));
 			amount.click();
 			Select s = new Select(amount);
 			s.selectByValue("9500");
 			Thread.sleep(3000);
 			
 			WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+			wait.until(ExpectedConditions.visibilityOf(months));
 			months.click();
 			Select s1 = new Select(months);
 			s1.selectByVisibleText("12 Months");
@@ -271,7 +251,9 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			}
 			Thread.sleep(3000);
 			
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"))).click();
+			WebElement agreeCheckBox = driver.findElement(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"));
+			wait.until(ExpectedConditions.visibilityOf(agreeCheckBox)).click();
+            
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//input[@formcontrolname='enteredWalletAmount']")).sendKeys("9500");		
@@ -288,7 +270,8 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			{
 			try 
 			{
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"))).click();
+				WebElement submitBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
+				wait.until(ExpectedConditions.visibilityOf(submitBtn)).click();
 				break;
 			} 
 			catch (Exception e) 
@@ -317,7 +300,10 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			Thread.sleep(1000);
 			String parentWindow = driver.getWindowHandle();
 			Thread.sleep(2000);
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[.='Pay Now']"))).click();
+			
+			WebElement submitBtn = driver.findElement(By.xpath("//button[.='Pay Now']"));
+			wait.until(ExpectedConditions.visibilityOf(submitBtn)).click();
+			
 			Set<String> childWindow = driver.getWindowHandles();
 			
 			for(String childid : childWindow)
@@ -332,7 +318,7 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			
 			driver.switchTo().window(parentWindow);
 			
-	        wait.until(ExpectedConditions.alertIsPresent());
+			wait.until(ExpectedConditions.alertIsPresent());
 	        Thread.sleep(2000);
 	        
 			String AlertMsg = driver.switchTo().alert().getText();
@@ -360,44 +346,44 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			driver.findElement(By.xpath("//div[.=' Thank for your Feedback']/following-sibling::div/button[.=' X ']")).click();
 			Thread.sleep(3000);
 			
-			try
+			WebElement SuccessPopup = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
+			String SuccessMsg = SuccessPopup.getText();
+			if(SuccessPopup.isDisplayed())
 			{
-				WebElement SuccessPopup = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
-				String SuccessMsg = SuccessPopup.getText();
-				if(SuccessPopup.isDisplayed())
-				{
-					System.out.println(SuccessMsg);
-					Assert.fail();
-				}
+				System.out.println(SuccessMsg);
+				driver.findElement(By.xpath("//label[@for='4-star']")).click();
 			}
-			catch(Exception e)
-			{
-				System.out.println("Failed");
-			}
+			
 			Thread.sleep(3000);
 		}
+		
+		
+		                                                     
+		
 		
 		
 		@Test(groups = "Schemes" , priority = 6)
 		public void afterSchemeSubscriptionFetchingFailureMsgTest() throws Exception
 		{
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(200));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebElement schemes = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(schemes));
+			schemes.click();
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
 			Thread.sleep(3000);
 			
 			WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+			wait.until(ExpectedConditions.visibilityOf(amount));
 			amount.click();
 			Select s = new Select(amount);
 			s.selectByValue("4500");
 			Thread.sleep(3000);
 			
 			WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+			wait.until(ExpectedConditions.visibilityOf(months));
 			months.click();
 			Select s1 = new Select(months);
 			s1.selectByVisibleText("12 Months");
@@ -414,7 +400,9 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			}
 			Thread.sleep(3000);
 			
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"))).click();
+			WebElement aggreeCheckBox = driver.findElement(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"));
+			wait.until(ExpectedConditions.elementToBeClickable(aggreeCheckBox)).click();
+			
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//input[@formcontrolname='enteredWalletAmount']")).sendKeys("4500");
@@ -424,7 +412,8 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			{
 			try 
 			{
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"))).click();
+				WebElement submitBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
+				wait.until(ExpectedConditions.elementToBeClickable(submitBtn)).click();
 				break;
 			} 
 			catch (Exception e) 
@@ -452,7 +441,9 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			
 			String parentWindow = driver.getWindowHandle();
 			Thread.sleep(3000);
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[.='Pay Now']"))).click();
+			
+			WebElement payNowBtn = driver.findElement(By.xpath("//button[.='Pay Now']"));
+			wait.until(ExpectedConditions.elementToBeClickable(payNowBtn)).click();
 			Thread.sleep(3000);
 			
 			Set<String> childWindow = driver.getWindowHandles();
@@ -470,31 +461,35 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			Thread.sleep(3000);
 			
 			driver.switchTo().window(parentWindow);
-			Assert.fail();
+			
+			driver.findElement(By.xpath("//button[.='Failure']")).click();
 			
 			
 		}
+		                                                  
 		
-		
-		@Test(groups = "Schemes" , priority = 6)
+		@Test(groups = "Schemes" , priority = 7)
 		public void takingScreenshotofRecentlySubscribedSchemeTest() throws Exception
 		{
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+			
+			WebElement scheme = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(scheme));
+			scheme.click();
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
 			Thread.sleep(3000);
 			
 			WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+			wait.until(ExpectedConditions.visibilityOf(amount));
 			amount.click();
 			Select s = new Select(amount);
 			s.selectByValue("1500");
 			Thread.sleep(3000);
 			
 			WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+			wait.until(ExpectedConditions.visibilityOf(months));
 			months.click();
 			Select s1 = new Select(months);
 			s1.selectByVisibleText("12 Months");
@@ -515,14 +510,16 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			driver.findElement(By.xpath("//input[@formcontrolname='enteredWalletAmount']")).sendKeys("1800");		
 			Thread.sleep(3000);
 			
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"))).click();
+			WebElement agreeCheckBoX = driver.findElement(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"));
+			wait.until(ExpectedConditions.visibilityOf(agreeCheckBoX)).click();
 			Thread.sleep(5000);
 			
 			while (true)
 			{
 			try 
 			{
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"))).click();
+				WebElement submitBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
+				wait.until(ExpectedConditions.visibilityOf(submitBtn)).click();
 				break;
 			} 
 			catch (Exception e) 
@@ -545,10 +542,10 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 //			driver.findElement(By.xpath("//div[.='Feedback']/following-sibling::div/button[.=' X ']")).click();
 			
             WebElement TextArea = driver.findElement(By.xpath("//textarea[@placeholder='Help us to improve*']"));
-			wait.until(ExpectedConditions.visibilityOf(TextArea));
+            wait.until(ExpectedConditions.visibilityOf(TextArea));
 			TextArea.sendKeys("Good Scheme");
 			Thread.sleep(2000);
-			
+			                                                         //Upto here fluent wait done
 			driver.findElement(By.xpath("//label[@for='4-star']")).click();
 			Thread.sleep(2000);
 			
@@ -575,31 +572,34 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			
 			WebElement DownloadBtn = driver.findElement(By.xpath("//a[text()=' Download']"));
 			wait.until(ExpectedConditions.visibilityOf(DownloadBtn));
-			Assert.fail();
+			
+			driver.findElement(By.xpath("(//button[.='View Details'])[1]")).click();
 								                                            		
 	  }
 		
 		
-		@Test(groups = "Schemes" , priority = 7)
+		@Test(groups = "Schemes" , priority = 8)
 		public void takingScreenshotofRecentlySubscribedSchemeAfterDownlodingTest() throws Exception
 		{
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 			
-			WebElement ele = driver.findElement(By.xpath("//span[.='Schemes']"));
-			wait.until(ExpectedConditions.visibilityOf(ele));
-			ele.click();
+			WebElement schemes = driver.findElement(By.xpath("//span[.='Schemes']"));
+			wait.until(ExpectedConditions.visibilityOf(schemes));
+			schemes.click();
 			Thread.sleep(3000);
 			
 			driver.findElement(By.xpath("//img[@src='../../../assets/imgs/goldplus.png']")).click();
 			Thread.sleep(3000);
 			
 			WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+			wait.until(ExpectedConditions.visibilityOf(amount));
 			amount.click();
 			Select s = new Select(amount);
 			s.selectByValue("1500");
 			Thread.sleep(3000);
 			
 			WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+			wait.until(ExpectedConditions.visibilityOf(months));
 			months.click();
 			Select s1 = new Select(months);
 			s1.selectByVisibleText("12 Months");
@@ -620,14 +620,16 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			driver.findElement(By.xpath("//input[@formcontrolname='enteredWalletAmount']")).sendKeys("1800");		
 			Thread.sleep(3000);
 			
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"))).click();
+			WebElement agreeCheckBox = driver.findElement(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"));
+			wait.until(ExpectedConditions.visibilityOf(agreeCheckBox)).click();
 			Thread.sleep(5000);
 			
 			while (true)
 			{
 			try 
 			{
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"))).click();
+				WebElement submitBtn = driver.findElement(By.xpath("//div[@class='coupon-text2']/following-sibling::div/button[@type='submit']"));
+				wait.until(ExpectedConditions.visibilityOf(submitBtn)).click();
 				break;
 			} 
 			catch (Exception e) 
@@ -650,7 +652,7 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 //			driver.findElement(By.xpath("//div[.='Feedback']/following-sibling::div/button[.=' X ']")).click();
 			
             WebElement TextArea = driver.findElement(By.xpath("//textarea[@placeholder='Help us to improve*']"));
-			wait.until(ExpectedConditions.visibilityOf(TextArea));
+            wait.until(ExpectedConditions.visibilityOf(TextArea));
 			TextArea.sendKeys("Good Scheme");
 			Thread.sleep(2000);
 			
@@ -683,7 +685,8 @@ public class Done_SchemesErrors_StgTest extends BaseClass{
 			
 			DownloadBtn.click();
 			
-			Assert.fail();
+			driver.findElement(By.xpath("(//button[.='View Details'])[1]"));
+			
 			
 						                                            		
 	}

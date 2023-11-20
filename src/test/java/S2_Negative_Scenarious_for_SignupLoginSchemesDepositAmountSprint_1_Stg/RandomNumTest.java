@@ -18,7 +18,6 @@ import GenericUtility.BaseClass;
 import GenericUtility.JavaUtility;
 
 public class RandomNumTest extends BaseClass {
-
 	
 	@Test
 	public void ranTest()

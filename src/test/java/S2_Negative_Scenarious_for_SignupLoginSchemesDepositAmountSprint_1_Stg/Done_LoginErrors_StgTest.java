@@ -89,9 +89,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1000);
 		}
-		
-		driver.quit();
-		
+		finally
+		{
+			driver.quit();
+		}
+			
 	}
 	
 	@Test(groups = "Login" , priority = 2)                           //Not Registered mobile number
@@ -161,8 +163,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		driver.quit();
 	}
 	
 	
@@ -233,9 +238,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 	
@@ -305,9 +312,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 	
@@ -377,9 +386,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 	
@@ -450,9 +461,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 	
@@ -523,9 +536,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 	
@@ -592,9 +607,11 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 	@Test(groups = "Login" , priority = 8)                                  //Login with Google 
@@ -669,8 +686,16 @@ public class Done_LoginErrors_StgTest {
 		
 		driver.switchTo().window(Parent);
 		
+		try
+		{
+			Thread.sleep(1);
+		}
+		finally 
+		{
+			driver.quit();
+		}
+			
 		
-		driver.quit();
 	
 	}
 	
@@ -728,10 +753,14 @@ public class Done_LoginErrors_StgTest {
 		WebElement Dashboard = driver.findElement(By.xpath("//span[.='Dashboard']"));
 		wUtil.waitForElementToBeVisible(driver, Dashboard);
 		wUtil.takeScreenShot(driver, methodName);
+		Assert.fail();
 		
-		Thread.sleep(2000);
+		try {
+			Thread.sleep(2000);
+		} finally {
+			driver.quit();
+		}
 		
-		driver.quit();
 	}
 	
 	@Test(groups = "Login" , priority = 10)                                  //10 Numbers As 0 mobile number
@@ -800,8 +829,10 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
-		
-		driver.quit();
+        finally
+        {
+        	driver.quit();
+        }
 	}
 	
 	@Test(groups = "Login" , priority = 11)                                  //1st Number As 0 mobile number
@@ -870,9 +901,10 @@ public class Done_LoginErrors_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally {
+			driver.quit();
+		}
 		
-		
-		driver.quit();
 	}
 	
 }

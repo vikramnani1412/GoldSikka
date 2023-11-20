@@ -77,6 +77,8 @@ public class Done_SignOutErrors_StgTest {
 		wUtil.takeScreenShot(driver, methodName);
 		
 		Thread.sleep(2000);
-
+        
+		driver.quit();
+		
 	}
 }

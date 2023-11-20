@@ -1,65 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="10" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="1" failed="8" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-18T18:33:05 IST" name="Default suite" finished-at="2023-11-18T18:33:42 IST" duration-ms="37474">
+  <suite started-at="2023-11-20T11:48:40 IST" name="Default suite" finished-at="2023-11-20T11:52:01 IST" duration-ms="200505">
     <groups>
-      <group name="BookingAccount">
-        <method signature="Done_BookingAccountErrors.entering50RsInWithdrawAmountTextFieldAndClickonWithdraw()[pri:5, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" name="entering50RsInWithdrawAmountTextFieldAndClickonWithdraw" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors"/>
-      </group> <!-- BookingAccount -->
+      <group name="Signup">
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingEmailGivenErrorTest()[pri:1, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationExistingEmailGivenErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingPhoneNumberGivenErrorTest()[pri:2, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationExistingPhoneNumberGivenErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationPhoneNumberNotGivenErrorTest()[pri:3, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationPhoneNumberNotGivenErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenWrongReferralCodeErrorTest()[pri:4, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationGivenWrongReferralCodeErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenRightReferralCodePassedTest()[pri:5, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationGivenRightReferralCodePassedTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipNameErrorTest()[pri:6, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationSkipNameErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest()[pri:7, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest()[pri:8, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+        <method signature="Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenInvalidEmailErrorTest()[pri:9, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" name="whileSignIntoApplicationGivenInvalidEmailErrorTest" class="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest"/>
+      </group> <!-- Signup -->
     </groups>
-    <test started-at="2023-11-18T18:33:05 IST" name="Default test" finished-at="2023-11-18T18:33:42 IST" duration-ms="37474">
-      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:05 IST" name="bsConfig" finished-at="2023-11-18T18:33:05 IST" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:05 IST" name="bcConfig" finished-at="2023-11-18T18:33:08 IST" duration-ms="2455" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:08 IST" name="bmConfig" finished-at="2023-11-18T18:33:08 IST" duration-ms="95" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bmConfig -->
-        <test-method signature="entering50RsInWithdrawAmountTextFieldAndClickonWithdraw()[pri:5, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:08 IST" name="entering50RsInWithdrawAmountTextFieldAndClickonWithdraw" finished-at="2023-11-18T18:33:42 IST" duration-ms="34481" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+    <test started-at="2023-11-20T11:48:40 IST" name="Default test" finished-at="2023-11-20T11:52:01 IST" duration-ms="200505">
+      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest">
+        <test-method signature="whileSignIntoApplicationExistingEmailGivenErrorTest()[pri:1, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:48:40 IST" name="whileSignIntoApplicationExistingEmailGivenErrorTest" finished-at="2023-11-20T11:49:13 IST" duration-ms="32687" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h6[.='   Transaction Successful ']"}
-  (Session info: chrome=119.0.6045.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.14.1', revision: '03f8ede370'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f052e2d3dbb1cdcb3e2848a8e735c74, findElement {using=xpath, value=//h6[.='   Transaction Successful ']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\TEMP\scoped_dir2...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64466}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64466/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f052e2d3dbb1cdcb3e2848a8e735c74]]>
+              <![CDATA[null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h6[.='   Transaction Successful ']"}
-  (Session info: chrome=119.0.6045.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.14.1', revision: '03f8ede370'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f052e2d3dbb1cdcb3e2848a8e735c74, findElement {using=xpath, value=//h6[.='   Transaction Successful ']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\TEMP\scoped_dir2...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64466}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64466/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f052e2d3dbb1cdcb3e2848a8e735c74
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors.entering50RsInWithdrawAmountTextFieldAndClickonWithdraw(Done_BookingAccountErrors.java:185)
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingEmailGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:260)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -88,23 +56,309 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- entering50RsInWithdrawAmountTextFieldAndClickonWithdraw -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:42 IST" name="amConfig" finished-at="2023-11-18T18:33:42 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- whileSignIntoApplicationExistingEmailGivenErrorTest -->
+        <test-method signature="whileSignIntoApplicationExistingPhoneNumberGivenErrorTest()[pri:2, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:49:13 IST" name="whileSignIntoApplicationExistingPhoneNumberGivenErrorTest" finished-at="2023-11-20T11:49:44 IST" duration-ms="31170" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingPhoneNumberGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:355)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:42 IST" name="acConfig" finished-at="2023-11-18T18:33:42 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- whileSignIntoApplicationExistingPhoneNumberGivenErrorTest -->
+        <test-method signature="whileSignIntoApplicationPhoneNumberNotGivenErrorTest()[pri:3, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:49:44 IST" name="whileSignIntoApplicationPhoneNumberNotGivenErrorTest" finished-at="2023-11-20T11:50:02 IST" duration-ms="17993" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationPhoneNumberNotGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:430)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors@36ebc363]" started-at="2023-11-18T18:33:43 IST" name="asConfig" finished-at="2023-11-18T18:33:43 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- whileSignIntoApplicationPhoneNumberNotGivenErrorTest -->
+        <test-method signature="whileSignIntoApplicationGivenWrongReferralCodeErrorTest()[pri:4, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:50:02 IST" name="whileSignIntoApplicationGivenWrongReferralCodeErrorTest" finished-at="2023-11-20T11:50:20 IST" duration-ms="18188" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenWrongReferralCodeErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:520)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- asConfig -->
-      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors -->
+        </test-method> <!-- whileSignIntoApplicationGivenWrongReferralCodeErrorTest -->
+        <test-method signature="whileSignIntoApplicationGivenRightReferralCodePassedTest()[pri:5, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:50:20 IST" name="whileSignIntoApplicationGivenRightReferralCodePassedTest" finished-at="2023-11-20T11:50:39 IST" duration-ms="18207" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenRightReferralCodePassedTest(Done_SignUpModuleNegativeScenarios_StgTest.java:591)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whileSignIntoApplicationGivenRightReferralCodePassedTest -->
+        <test-method signature="whileSignIntoApplicationSkipNameErrorTest()[pri:6, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:50:39 IST" name="whileSignIntoApplicationSkipNameErrorTest" finished-at="2023-11-20T11:50:59 IST" duration-ms="20484" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipNameErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:667)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whileSignIntoApplicationSkipNameErrorTest -->
+        <test-method signature="whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest()[pri:7, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:50:59 IST" name="whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest" finished-at="2023-11-20T11:51:15 IST" duration-ms="16092" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:737)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest -->
+        <test-method signature="whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest()[pri:8, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:51:15 IST" name="whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest" finished-at="2023-11-20T11:51:34 IST" duration-ms="18397" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:807)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest -->
+        <test-method signature="whileSignIntoApplicationGivenInvalidEmailErrorTest()[pri:9, instance:S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@689604d9]" started-at="2023-11-20T11:51:34 IST" name="whileSignIntoApplicationGivenInvalidEmailErrorTest" finished-at="2023-11-20T11:52:01 IST" duration-ms="27241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whileSignIntoApplicationGivenInvalidEmailErrorTest -->
+      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

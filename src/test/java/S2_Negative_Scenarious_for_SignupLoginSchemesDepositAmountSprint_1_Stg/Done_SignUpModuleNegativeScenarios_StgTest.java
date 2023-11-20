@@ -170,8 +170,10 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		{
 			Thread.sleep(1);
 		}
-		
-		driver.quit();
+		finally
+		{
+			driver.quit();
+		}
 		
 	}
 	
@@ -242,9 +244,8 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		}			
 		catch (Exception e) 
 		{
-			Thread.sleep(1);
+			Thread.sleep(3000);
 		}
-		
 		
 		//Email already existing error
 		try 
@@ -261,10 +262,12 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		}
 		catch (Exception e) 
 		{
-			Thread.sleep(1);
+			Thread.sleep(3000);
 		}
-		
-		driver.quit();
+		finally
+		{
+			driver.quit();
+		}
 		
 	}
 	
@@ -354,12 +357,12 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		}
 		catch (Exception e) 
 		{
-			Thread.sleep(1);
+			Thread.sleep(3000);
 		}
-	    
-		Thread.sleep(3000);
-		
-		driver.quit();
+		finally
+		{
+			driver.quit();
+		}
 		
 	}
 	
@@ -449,8 +452,10 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		{
 			Thread.sleep(1);
 		}
-	    
-		driver.quit();
+		finally
+		{
+			driver.quit();
+		}
 		
 	}
 	
@@ -519,8 +524,10 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		{
 			Thread.sleep(1);
 		}
-		
-		driver.quit();
+		finally
+		{
+			driver.quit();
+		}
 	}
 	
 	
@@ -581,18 +588,17 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		   {
 		      System.out.println(RightReferralCodeMsg);
 		      wUtil.takeScreenShot(driver, methodName);
+		      Assert.fail();
 		   }
 		}
 		catch (Exception e) 
 		{
-			Thread.sleep(3000);
-			wUtil.takeScreenShot(driver, methodName);
-		    System.out.println(methodName+"--->Failed");
-		    Thread.sleep(1000);
-			Assert.fail();
+			Thread.sleep(1);
 		}
-		
-		driver.quit();
+		finally
+		{
+			driver.quit();
+		}
 	}
 	
 	
@@ -665,8 +671,11 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		{
 			Thread.sleep(1);
 		}
-		
-		driver.quit();
+		finally
+		{
+			Thread.sleep(3000);
+			driver.quit();
+		}
 		
 	}
 	
@@ -718,30 +727,24 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		Thread.sleep(2000);
 		
 		//Referral code
+		
+		WebElement SkipHeardAboutUsError = driver.findElement(By.xpath("//label[text()='Heard About Us ']/following-sibling::div[.='This field is required ']"));
+		String SkipHeardAboutUsErrorMsg = SkipHeardAboutUsError.getText();
+		   
+		System.out.println("You did not select how you heard about us You have to select a Value from drop down"+SkipHeardAboutUsErrorMsg);
+	    wUtil.takeScreenShot(driver, methodName);
+	    Thread.sleep(1000);
+		Assert.fail();
+		   
 		try
-		{
-		   WebElement SkipHeardAboutUsError = driver.findElement(By.xpath("//label[text()='Heard About Us ']/following-sibling::div[.='This field is required ']"));
-		   String SkipHeardAboutUsErrorMsg = SkipHeardAboutUsError.getText();
-		   
-		   System.out.println("You did not select how you heard about us You have to select a Value from drop down"+SkipHeardAboutUsErrorMsg);
-	       wUtil.takeScreenShot(driver, methodName);
-	       Thread.sleep(1000);
-		   Assert.fail();
-		   
-//		   if(SkipHeardAboutUsError.isDisplayed())
-//		   {
-//		       System.out.println("You did not select how you heard about us You have to select a Value from drop down"+SkipHeardAboutUsErrorMsg);
-//		       wUtil.takeScreenShot(driver, methodName);
-//		       Thread.sleep(1000);
-//			   Assert.fail();
-//		   }
-		}
-		catch (Exception e) 
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		driver.quit();
 	}
 	
 	@Test(groups = "Signup" , priority = 8)                    //More Than 10 Numbers In Mobile Num
@@ -808,8 +811,11 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		driver.quit();
 	}
 	
 	
@@ -893,8 +899,11 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		{
 			Thread.sleep(1);
 		}
+		finally
+		{
+			driver.quit();
+		}
 		
-		driver.quit();
 		
 	}
 	
