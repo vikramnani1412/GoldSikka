@@ -3,18 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest">
+      <class name="S3_StgSettingsPositiveScenarios.KycUpdationTest">
         <methods>
-          <include name="whileSignIntoApplicationGivenRightReferralCodePassedTest"/>
-          <include name="whileSignIntoApplicationGivenWrongReferralCodeErrorTest"/>
-          <include name="whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest"/>
-          <include name="whileSignIntoApplicationExistingPhoneNumberGivenErrorTest"/>
-          <include name="whileSignIntoApplicationSkipNameErrorTest"/>
-          <include name="whileSignIntoApplicationPhoneNumberNotGivenErrorTest"/>
-          <include name="whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest"/>
-          <include name="whileSignIntoApplicationExistingEmailGivenErrorTest"/>
+          <include name="kycUpdation1"/>
         </methods>
-      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest -->
+      </class> <!-- S3_StgSettingsPositiveScenarios.KycUpdationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -94,7 +94,7 @@ public class BaseClassOld {
 	@AfterSuite //(groups={"SmokeSuite","RegressionSuite"})
 		public void asConfig()
 		{
-		System.out.println("---Database Closed Successful---");
+		   System.out.println("---Database Closed Successful---");
 		}
 	   
 	

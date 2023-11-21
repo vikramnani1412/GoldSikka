@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="1" parallel="tests" name="Suite">
   <test thread-count="1" parallel="tests" name="Test">
+  <groups>
+  <run>
+  <include name="Schemes"></include>
+  </run>
+  </groups>
     <classes>
       <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Schemes_FluentWait_Errors"/>
     </classes>

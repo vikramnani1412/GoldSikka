@@ -383,7 +383,7 @@ public class BankAccountUpdating extends BaseClass{
 				//Here name we have to make dynamic to access multiple values
 				driver.findElement(By.xpath("//h5[text()=' Suryavanshi shivshankar']/..//p[.='342212707015']/../following-sibling::div/div/a[.='Set Default']")).click();
 		        
-				String PrimaryConformationMsg = driver.findElement(By.xpath("//h5[text()=' Suryavanshi shivshankar']/../following-sibling::div/div/a[text()=' Primary']")).getText();
+				String PrimaryConformationMsg = driver.findElement(By.xpath("//h5[text()=' "+EditName+"']/../following-sibling::div/div/a[text()=' Primary']")).getText();
 				
 				if(PrimaryConformationMsg.contains("Primary"))
 				{
