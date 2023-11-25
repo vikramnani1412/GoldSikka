@@ -1,6 +1,7 @@
 package ObjectRepository;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import GenericUtility.WebDriverUtility;
@@ -106,8 +108,11 @@ public class DashboardPage extends WebDriverUtility{//Rule-1:Create a seperate c
 	public void logoutOfApplication(WebDriver driver) throws Exception
 	{	
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(PowerBtn));
+		FluentWait<WebDriver> fluentWait = new FluentWait<>(driver)
+				.withTimeout(Duration.ofSeconds(100)) 
+				.pollingEvery(Duration.ofSeconds(2))
+				.ignoring(NoSuchElementException.class);
+	    fluentWait.until(ExpectedConditions.visibilityOf(PowerBtn));
 		PowerBtn.click();
 		driver.switchTo().alert().accept();
 		

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Suite">
+  <test thread-count="1" parallel="tests" name="Test">
+  <groups>
+  <run>
+  <include name="Settings"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="S3_StgSettingsNegativeScenarios.EmailNotGivenError_8_"/>
+      <class name="S3_StgSettingsNegativeScenarios.MobileNumNotGivenError_7_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeRelationDetailsClickOnSubmit_20_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddingBankAccountByGivingNameAccountNum_34_"/>
+      <class name="S3_StgSettingsNegativeScenarios.ClickOnTicketsGetSettingsPageError_1_"/>
+      <class name="S3_StgSettingsNegativeScenarios.DeleteNonPrimaryAccountError_31_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddressGivingOnlyTitleCityStateFields_26_"/>
+      <class name="S3_StgSettingsNegativeScenarios.MobileNumberInvalidGivenError_5_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeDeletion_21_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddressGivingOnlyTitleCityStatePincodeFields_27_"/>
+      <class name="S3_StgSettingsNegativeScenarios.ClickOnSettingsAndNoValuesGivingtoAllFields_3_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNamePhNoAddressCityStateCountryDetailsClickOnSubmit_18_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddingBankAccountWithoutGivingAnyData_32_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddressGivingInvalidDetailsToTitleCityStatePincodeAddressFields_29_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNamePhNoAddressDetailsClickOnSubmit_15_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingAllInvalidDetailsDetailsClickOnSubmit_22_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddressGivingOnlyTitleCityFields_25_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddressWithoutGivingDataInAnyFields_23_"/>
+      <class name="S3_StgSettingsNegativeScenarios.ClickOnFeedbackGetSettingsPageError_2_"/>
+      <class name="S3_StgSettingsNegativeScenarios.ClickOnSettingsAndGivingInvalidDetailstoAllFields_4_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NameInvalidGivenError_6_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddressGivingOnlyTitleCityStatePincodeAddressFields_28_"/>
+      <class name="S3_StgSettingsNegativeScenarios.ClearAllKYCFeildsDetailsClickOnSubmitError_9_"/>
+      <class name="S3_StgSettingsNegativeScenarios.DeletePrimaryAccountError_30_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNamePhNoAddressCityStateDetailsClickOnSubmit_17_"/>
+      <class name="S3_StgSettingsNegativeScenarios.addressGivingOnlyNameFields_24_"/>
+      <class name="S3_StgSettingsNegativeScenarios.DeletingPrimaryBankAccount_35_"/>
+      <class name="S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeWithoutGivingAnyDetailsClickOnSubmitBtn_12_"/>
+      <class name="S3_StgSettingsNegativeScenarios.AddingBankAccountByGivingOnlyName_33_"/>
+      <class name="S3_StgSettingsNegativeScenarios.EnterOnly1FieldDetailsOfKYCModuleError_10_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNameDetailsClickOnSubmit_13_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeDetailsClickOnSubmit_19_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNamePhNoAddressCityDetailsClickOnSubmit_16_"/>
+      <class name="S3_StgSettingsNegativeScenarios.NomineeGivingOnlyNameAndPhNoDetailsClickOnSubmit_14_"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
