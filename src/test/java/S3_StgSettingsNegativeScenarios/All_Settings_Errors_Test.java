@@ -20,14 +20,15 @@ import com.google.common.annotations.VisibleForTesting;
 
 import GenericUtility.BaseClass;
 import GenericUtility.ExcelFileUtility;
+import GenericUtility.JavaUtility;
 import GenericUtility.WebDriverUtility;
 import freemarker.ext.jsp.TaglibFactory.ClearMetaInfTldSource;
 
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class All_Settings_Errors_Test extends BaseClass {
 
-	   @Test(groups = "Settings", priority = 1)                           // Click on Ticket
-	   public void clickOnTicketsGetSettingsPageError () throws Exception {
+	   @Test(groups = "SettingsNegative1", priority = 1)          // Click on Ticket Lnk checking settings is opening r not
+	   public void clickOnTicketsLnkGetSettingsPageErrorTest () throws Exception {
 		
 		for(;;)
 		{
@@ -62,8 +63,8 @@ public class All_Settings_Errors_Test extends BaseClass {
   }
 		
 	   
-		@Test(groups = "Settings", priority = 2)                           // Click on Feed Back
-		public void clickOnFeedback () throws Exception {
+		@Test(groups = "SettingsNegative1", priority = 2)            // Click on FeedBack Lnk checking settings is opening r not
+		public void clickOnFeedbackLnkGetSettingsPageErrorTest () throws Exception {
 		
 		for(;;)
 		{
@@ -96,8 +97,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
 	}
 		
-		@Test(groups = "Settings", priority = 3)                           // click On Settings And No Values Giving to All Fields
-		public void clickOnSettingsAndNoValuesGivingtoAllFields () throws Exception {
+		@Test(groups = "SettingsNegative1", priority = 3)              // click On Settings And Giving Null Values Giving to All Fields
+		public void clickOnSettingsAndNoValuesGivingtoAllFieldsErrorTest () throws Exception {
 		
 		for(;;)
 		{
@@ -151,10 +152,9 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
 	}
 		
-		// click On Settings And Giving Invalid Details to Account All Fields--> 1
-		
-		@Test(groups = "Setting", priority = 4)                
-		public void clickOnSettingsAndGivingInvalidDetailstoAllFields () throws Exception {
+        
+		@Test(groups = "SettingsNegative1", priority = 4)     // click On Settings And Giving Invalid Details to Account All Fields--> 1
+		public void clickOnSettingsAndGivingInvalidDetailstoAllFieldsErrorTest () throws Exception {
 		
 		ExcelFileUtility eUtil = new ExcelFileUtility();
 		String Name = eUtil.readDataFromExcel("Settings", 40, 1);
@@ -206,8 +206,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
 	}
 		
-		@Test(groups = "Settings", priority = 5)
-		public void mobileNumberInvalidGivenText() throws Exception
+		@Test(groups = "SettingsNegative1", priority = 5)    //Giving invalid Mobile no error
+		public void mobileNumberInvalidGivenErrorErrorTest() throws Exception
 		{
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Name = eUtil.readDataFromExcel("Settings", 40, 2);
@@ -259,8 +259,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 			
 		}
 		
-		  @Test(groups = "Settings", priority = 6)             
-		  public void nameInvalidGivenText() throws Exception
+		  @Test(groups = "SettingsNegative1", priority = 6)    // Name not given error
+		  public void nameNotGivenErrorErrorTest() throws Exception
 		  {
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 //			String Name = eUtil.readDataFromExcel("Settings", 40, 3);
@@ -322,8 +322,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		}
 		
 		  
-		  @Test(groups = "Settings", priority = 7)                        //doubt from here not executing simply developing scripts
-		  public void mobileNumNotGivenText() throws Exception
+		  @Test(groups = "SettingsNegative1", priority = 7)      // 0 Given as mobile num error
+		  public void mobileNumGiven0ErrorTest() throws Exception
 		  {
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Name = eUtil.readDataFromExcel("Settings", 40, 4);
@@ -374,9 +374,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		}
 		  
 		  
-		  @Test(groups = "Settings", priority = 8)                        //doubt from here not executing simply developing scripts
-		  public void emailNotGivenText() throws Exception
+		  @Test(groups = "SettingsNegative1", priority = 8)         // Email Not Given Error
+		  public void emailNotGivenTextErrorTest() throws Exception
 		  {
+			JavaUtility jUtil = new JavaUtility();
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Name = eUtil.readDataFromExcel("Settings", 40, 5);
 //			String Email = eUtil.readDataFromExcel("Settings", 41, 4);
@@ -416,7 +417,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 			
 			WebElement PhoneNo = driver.findElement(By.xpath("//input[@placeholder='Enter Your Mobile Number']"));
 			PhoneNo.clear();
-			PhoneNo.sendKeys(MobileNo);
+			PhoneNo.sendKeys(MobileNo+jUtil.getRandomNum());
 			Thread.sleep(2000);
 			
 			driver.findElement(By.xpath("//button[.='Submit']")).click();
@@ -428,8 +429,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		}
 		  
 		  
-		  @Test(groups = "Settings", priority = 9)
-		  public void clearAllKYCFeildDetailsClickOnSubmit() throws InterruptedException, AWTException
+		  @Test(groups = "SettingsNegative1", priority = 9)                  //Without giving kyc details click on submit error
+		  public void clearAllKYCFeildDetailsClickOnSubmitErrorTest() throws InterruptedException, AWTException
 		  {
 			  
 			  
@@ -496,8 +497,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 	          
 		  }
 		  
-		  @Test(groups = "Settings", priority = 10)
-		  public void enterOnly1FieldDetailsOfKYCModule() throws Exception
+		  @Test(groups = "SettingsNegative1", priority = 10)           // Giving only father name while adding kyc and click on submit
+		  public void enterOnlyFatherNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
 		  {
 			  
 			  Thread.sleep(3000);
@@ -560,8 +561,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 			  
 		  }
 		  
-		  @Test(groups = "Settings", priority = 11)                        //doubt from here not executing simply developing scripts
-		  public void enteringInvalidDataInAllKycFeilds() throws Exception
+		  
+		  
+		  @Test(groups = "SettingsNegative2", priority = 11)        // Entering Invalid Data In All Kyc Feilds and click on submit
+		  public void enteringInvalidDataInAllKycFeildsErrorTest()throws Exception
 		  {
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String FatherName = eUtil.readDataFromExcel("Settings", 46, 1);
@@ -636,8 +639,9 @@ public class All_Settings_Errors_Test extends BaseClass {
 		}
 		  
 		  
-		  @Test(groups = "Settings", priority = 12)
-		  public void nomineeWithoutGivingAnyDetailsClickOnSubmit() throws Exception
+		  
+		  @Test(groups = "SettingsNegative2", priority = 12)          // Without Giving Any Details in Nominee Module Click On Submit
+		  public void nomineeWithoutGivingAnyDetailsClickOnSubmitErrorTest() throws Exception
 		  {
 			  
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
@@ -673,8 +677,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 13)
-		  public void nomineeGivingOnlyNameDetailsClickOnSubmit() throws Exception
+		  @Test(groups = "SettingsNegative2", priority = 13)      //Giving only name while adding nominee details and click on submit
+		  public void nomineeGivingOnlyNameDetailsClickOnSubmitErrorTest() throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -713,8 +717,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 14)
-		  public void nomineeGivingOnlyNameAndPhNoDetailsClickOnSubmit() throws Exception
+		  // Giving Only Name And PhNo Details While Adding Nominee And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative2", priority = 14)      
+		  public void nomineeGivingOnlyNameAndPhNoDetailsClickOnSubmitErrorTest() throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -756,8 +762,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 15)
-		  public void nomineeGivingOnlyNamePhNoAddressDetailsClickOnSubmit() throws Exception
+	      // Giving Only Name , PhNo and Address Details While Adding Nominee And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative2", priority = 15)
+		  public void nomineeGivingOnlyNamePhNoAddressDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -802,8 +810,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 16)
-		  public void nomineeGivingOnlyNamePhNoAddressCityDetailsClickOnSubmit() throws Exception
+		  // Giving Only Name , PhNo , Address And City Details While Adding Nominee And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative2", priority = 16)
+		  public void nomineeGivingOnlyNamePhNoAddressCityDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -851,8 +861,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 17)
-		  public void nomineeGivingOnlyNamePhNoAddressCityStateDetailsClickOnSubmit() throws Exception
+		  // Giving Only Name , PhNo , Address , City and State Details While Adding Nominee And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative2", priority = 17)
+		  public void nomineeGivingOnlyNamePhNoAddressCityStateDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -898,7 +910,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 			   WebElement state = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
 			   
 			   Select s = new Select(state);
-			   s.selectByVisibleText("Telangana");
+			   s.selectByVisibleText(State);
 			   
 			   Thread.sleep(3000);
 			   
@@ -910,9 +922,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
+		  // Giving Only Name , PhNo , Address , City , State and Country Details While Adding Nominee And Click On Submit Error
 		  
-		  @Test(groups = "Settings", priority = 18)
-		  public void nomineeGivingOnlyNamePhNoAddressCityStateCountryDetailsClickOnSubmit() throws Exception
+		  @Test(groups = "SettingsNegative2", priority = 18)
+		  public void nomineeGivingOnlyNamePhNoAddressCityStateCountryDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -979,8 +992,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 19)
-		  public void nomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeDetailsClickOnSubmit() throws Exception
+		  // Giving Only Name , PhNo , Address , City , State , Country And PinCode Details While Adding Nominee And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative2", priority = 19)
+		  public void nomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -1050,8 +1065,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 20)                                                 // Passed Test Case
-		  public void nomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeRelationDetailsClickOnSubmit() throws Exception
+		// Giving Only Name , PhNo , Address , City , State , Country , PinCode And Relation Details While Adding Nominee And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative2", priority = 20)                                                 // Passed Test Case
+		  public void nomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeRelationDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
@@ -1130,8 +1147,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 21)
-		  public void nomineeDeletion() throws Exception
+		  //Nominee deleting
+		  
+		  @Test(groups = "SettingsNegative3", priority = 21)
+		  public void nomineeDeletionErrorTest () throws Exception
 		  {
 			  			  
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
@@ -1172,10 +1191,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
+		  // Giving Only Invalid Details While Adding Nominee And Click On Submit Error
 		  
-		  
-		  @Test(groups = "Settings", priority = 22)    
-		  public void nomineeGivingAllInvalidDetailsDetailsClickOnSubmit() throws Exception
+		  @Test(groups = "SettingsNegative3", priority = 22)    
+		  public void nomineeGivingAllInvalidDetailsDetailsClickOnSubmitErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 54, 2);
@@ -1253,8 +1272,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 23)
-		  public void addressWithoutGivingDataInAnyFields() throws Exception
+		// Without Giving Any Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 23)
+		  public void addressWithoutGivingDataInAnyFieldsErrorTest () throws Exception
 		  {
 			  
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
@@ -1289,8 +1310,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 24)
-		  public void addressGivingOnlyNameFields() throws Exception
+		 // Giving Only Title Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 24)
+		  public void addressGivingOnlyTitleFieldsErrorTest () throws Exception
 		  {
 			  
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -1330,8 +1353,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 25)
-		  public void addressGivingOnlyTitleCityFields() throws Exception
+		  // Giving Only Title , City Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 25)
+		  public void addressGivingOnlyTitleCityFieldsErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Title = eUtil.readDataFromExcel("Settings", 65, 1);
@@ -1373,8 +1398,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 26)
-		  public void addressGivingOnlyTitleCityStateFields() throws Exception
+		  // Giving Only Title , City , State Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 26)
+		  public void addressGivingOnlyTitleCityStateFieldsErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Title = eUtil.readDataFromExcel("Settings", 65, 1);
@@ -1422,8 +1449,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 27)
-		  public void addressGivingOnlyTitleCityStatePincodeFields() throws Exception
+		// Giving Only Title , City , State , PinCode Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 27)
+		  public void addressGivingOnlyTitleCityStatePincodeFieldsErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Title = eUtil.readDataFromExcel("Settings", 65, 1);
@@ -1474,8 +1503,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 28)
-		  public void addressGivingOnlyTitleCityStatePincodeAddressFields() throws Exception
+		  // Giving Only Title , City , State , PinCode , Address Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 28)
+		  public void addressGivingOnlyTitleCityStatePincodeAddressFieldsErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Title = eUtil.readDataFromExcel("Settings", 65, 1);
@@ -1530,8 +1561,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  
 		  
 		  
-		  @Test(groups = "Settings", priority = 29)
-		  public void addressGivingInvalidDetailsToTitleCityStatePincodeAddressFields() throws Exception
+		  // Giving Invalid Details While Adding Address And Click On Submit Error
+		  
+		  @Test(groups = "SettingsNegative3", priority = 29)
+		  public void addressGivingInvalidDetailsToTitleCityStatePincodeAddressFieldsErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Title = eUtil.readDataFromExcel("Settings", 65, 2);
@@ -1587,8 +1620,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  
 		  
 		  
-		  @Test(groups = "Settings", priority = 30)
-		  public void deletePrimaryAccountError() throws Exception
+		  @Test(groups = "SettingsNegative3", priority = 30)
+		  public void deletePrimaryAccountErrorTest () throws Exception
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				
@@ -1623,8 +1656,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 31)
-		  public void deleteNonPrimaryAccountError() throws Exception
+		  // Deleting Non Primary Bank Account
+		  
+		  @Test(groups = "SettingsNegative4", priority = 31)
+		  public void deleteNonPrimaryAccountErrorTest () throws Exception
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				
@@ -1658,10 +1693,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 			   
 		  }
 		  
+		  // Adding Bank Account without giving Any details
 		  
-		  
-		  @Test(groups = "Settings", priority = 32)
-		  public void addingBankAccountWithoutGivingAnyData() throws Exception
+		  @Test(groups = "SettingsNegative4", priority = 32)
+		  public void addingBankAccountWithoutGivingAnyDataErrorTest () throws Exception
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				
@@ -1693,8 +1728,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 33)
-		  public void addingBankAccountByGivingOnlyName() throws Exception
+		  // Adding Bank Account without giving Any details
+		  
+		  @Test(groups = "SettingsNegative4", priority = 33)
+		  public void addingBankAccountByGivingOnlyNameErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 73, 1);
@@ -1732,8 +1769,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 34)
-		  public void addingBankAccountByGivingNameAccountNum() throws Exception
+		  // Adding Bank Account By Giving Only Name details
+		  
+		  @Test(groups = "SettingsNegative4", priority = 34)
+		  public void addingBankAccountByGivingNameAccountNumErrorTest () throws Exception
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 73, 1);
@@ -1774,8 +1813,10 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  @Test(groups = "Settings", priority = 35)
-		  public void deletingPrimaryBankAccount() throws Exception
+		  // Deleting Primary Bank Account Error
+		  
+		  @Test(groups = "SettingsNegative4", priority = 35)
+		  public void deletingPrimaryBankAccountErrorTest () throws Exception
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				

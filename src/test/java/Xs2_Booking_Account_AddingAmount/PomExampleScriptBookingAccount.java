@@ -1,4 +1,4 @@
-package s2_Booking_Account_AddingAmount;
+package Xs2_Booking_Account_AddingAmount;
 
 import java.io.FileInputStream;
 import java.time.Duration;

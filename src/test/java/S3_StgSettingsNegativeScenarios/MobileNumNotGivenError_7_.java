@@ -14,7 +14,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class MobileNumNotGivenError_7_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 7)                        //doubt from here not executing simply developing scripts
+	@Test(groups = "SettingsNegative1", priority = 7)                        //doubt from here not executing simply developing scripts
 	  public void mobileNumNotGivenText() throws Exception
 	  {
 		ExcelFileUtility eUtil = new ExcelFileUtility();

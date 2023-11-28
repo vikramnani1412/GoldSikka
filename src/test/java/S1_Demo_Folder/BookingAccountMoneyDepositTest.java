@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import GenericUtility.BaseClass;
 
 @Listeners(GenericUtility.ListnersImplementationClass.class)
-public class Ok_Demo_LoginBookingAccountDepositMoneyTest extends BaseClass {
+public class BookingAccountMoneyDepositTest extends BaseClass {
         
 		@Test(groups = "BookingAccount")
 		public void addingAmountToWalletTest() throws InterruptedException, Exception 
@@ -45,7 +45,8 @@ public class Ok_Demo_LoginBookingAccountDepositMoneyTest extends BaseClass {
 			
 			Thread.sleep(2000);
 			
-			driver.findElement(By.xpath("//div[@class='redesign-v15-cta-wrapper svelte-s8db8t']")).click();
+//			driver.findElement(By.xpath("//div[@class='redesign-v15-cta-wrapper svelte-s8db8t']")).click();
+			driver.findElement(By.xpath("//button[.='Proceed']")).click();
 			
 			Thread.sleep(2000);
 			
@@ -58,7 +59,10 @@ public class Ok_Demo_LoginBookingAccountDepositMoneyTest extends BaseClass {
 			Thread.sleep(2000);
 			
 			String parentWindow = driver.getWindowHandle();
-			driver.findElement(By.className("svelte-s8db8t")).click();
+			
+			driver.findElement(By.xpath("//button[.='Pay Now']")).click();
+			
+//			driver.findElement(By.className("svelte-s8db8t")).click();
 			Set<String> childWindow = driver.getWindowHandles();
 			
 			for(String childid : childWindow)

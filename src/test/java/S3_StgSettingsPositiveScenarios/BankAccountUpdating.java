@@ -357,7 +357,7 @@ public class BankAccountUpdating extends BaseClass{
 	    }
 		
 		
-		   @Test
+		   @Test(groups = "BankUpdation" , priority = 6)
 		   public void makingPrimaryAccountToClearExistingDataForNextExecution() throws EncryptedDocumentException, IOException, AWTException
 		   {
 			    ExcelFileUtility eUtil = new ExcelFileUtility();		
@@ -396,7 +396,7 @@ public class BankAccountUpdating extends BaseClass{
 		   }
 		   
 		   
-		   @Test(groups = "BankAcUpdation" , priority = 5)
+		   @Test(groups = "BankAcUpdation" , priority = 7)
 			public void deleteingExistingNotEditedBankAccountForNextExecutionDetails() throws Exception
 			{
 				ExcelFileUtility eUtil = new ExcelFileUtility();		

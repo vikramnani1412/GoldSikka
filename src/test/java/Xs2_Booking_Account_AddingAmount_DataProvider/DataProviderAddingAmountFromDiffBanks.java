@@ -1,7 +1,5 @@
-package s2_Booking_Account_AddingAmount_DataProvider;
+package Xs2_Booking_Account_AddingAmount_DataProvider;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
@@ -12,21 +10,28 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import GenericUtility.BaseClass;
 import GenericUtility.ConstantsUtility;
 import GenericUtility.ExcelFileUtility;
+import ObjectRepository.BookingAccountPage;
+import ObjectRepository.BookingAccountPhNoFramePage;
 import ObjectRepository.DashboardPage;
+import ObjectRepository.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DataProviderAddingAmountFromDiffBanksDropdown {
+public class DataProviderAddingAmountFromDiffBanks extends BaseClass {
 
-	
 	@Test(dataProvider = "excelData")
 	public void testWithExcelData(String columnValue) throws Exception {
+		
+		
+		//Without Pom classes
 		
 		FileInputStream fis = new FileInputStream(ConstantsUtility.propertyfilepath);
 		Properties prop = new Properties();
@@ -65,28 +70,15 @@ public class DataProviderAddingAmountFromDiffBanksDropdown {
         
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[.='Netbanking']")).click();
-		
-		driver.findElement(By.xpath("//button[.='Select a different bank']")).click();
-		
-		while(true)
-		{
-		try
-		{
-			WebElement bank = driver.findElement(By.xpath("//img[contains(@alt,'"+columnValue+"')]"));
-			bank.click();
-			System.out.println(columnValue);
-			break;
-		}
-		catch (Exception e) 
-		{
-			Robot r = new Robot();
-			r.keyPress(KeyEvent.VK_DOWN);
-			r.keyRelease(KeyEvent.VK_DOWN);
-			
-		}}
+		WebElement bank = driver.findElement(By.xpath("//div[contains(@id,'bank-item-"+columnValue+"')]"));
+		bank.click();
+//		driver.findElement(By.xpath("//div[.='ICICI']")).click();
 		
 		String parentWindow = driver.getWindowHandle();
-		driver.findElement(By.className("svelte-s8db8t")).click();
+		
+		WebElement PayNowBtn = driver.findElement(By.className("svelte-s8db8t"));//button[.='Pay Now']
+		PayNowBtn.click();
+		
 		Set<String> childWindow = driver.getWindowHandles();
 
 		for(String childids : childWindow)
@@ -120,7 +112,7 @@ public class DataProviderAddingAmountFromDiffBanksDropdown {
 		DashboardPage dPage = new DashboardPage(driver);
 		dPage.logoutOfApplication(driver);
 		
-}
+		
 		 //Pom Using
 		
 //		LandingPage lPage = new LandingPage(driver);
@@ -173,17 +165,17 @@ public class DataProviderAddingAmountFromDiffBanksDropdown {
 //
 //		System.out.println("After adding amount to booking account");
 //		lPage.clickOnBookingAccountLnk(driver);
-	
-	
+
+	}
+
 	@DataProvider(name = "excelData")
-	public Object[][] testData() 
-	{
-		String[] columnData = ExcelFileUtility.getSingleColumnData(ConstantsUtility.excelfilepath, "SchemesBanksDropdown", 0); // Replace
+	public Object[][] testData() {
+		String[] columnData = ExcelFileUtility.getSingleColumnData(ConstantsUtility.excelfilepath, "AmountDepositBanks", 0); // Replace
 																															// '0'
 																															// with
 																															// the
 																															// desired
-	                 																										// index.
+																															// column															// index.
 		Object[][] data = new Object[columnData.length][1];
 		for (int i = 0; i < columnData.length; i++) 
 		{
@@ -191,5 +183,4 @@ public class DataProviderAddingAmountFromDiffBanksDropdown {
 		}
 		return data;
 	}
-	
 }

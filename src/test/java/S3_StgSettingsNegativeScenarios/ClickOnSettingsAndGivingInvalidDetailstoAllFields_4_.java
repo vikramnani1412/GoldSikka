@@ -13,7 +13,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class ClickOnSettingsAndGivingInvalidDetailstoAllFields_4_ extends BaseClass {
 
-	@Test(groups = "Setting", priority = 4)                
+	@Test(groups = "SettingsNegative1", priority = 4)                
 	public void clickOnSettingsAndGivingInvalidDetailstoAllFields () throws Exception {
 	
 	ExcelFileUtility eUtil = new ExcelFileUtility();

@@ -14,7 +14,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class MobileNumberInvalidGivenError_5_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 5)
+	@Test(groups = "SettingsNegative1", priority = 5)
 	public void mobileNumberInvalidGivenText() throws Exception
 	{
 		ExcelFileUtility eUtil = new ExcelFileUtility();

@@ -13,7 +13,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AddressGivingInvalidDetailsToTitleCityStatePincodeAddressFields_29_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 29)
+	@Test(groups = "SettingsNegative3", priority = 29)
 	  public void addressGivingInvalidDetailsToTitleCityStatePincodeAddressFields() throws Exception
 	  {
 		  ExcelFileUtility eUtil = new ExcelFileUtility();

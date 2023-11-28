@@ -1,4 +1,4 @@
-package s2_Booking_Account_AddingAmount_DataProvider;
+package Xs2_Booking_Account_AddingAmount_DataProvider;
 
 import java.io.IOException;
 import java.time.Duration;

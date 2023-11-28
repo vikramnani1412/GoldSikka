@@ -38,7 +38,7 @@ public class MoneyWithdrawlTest extends BaseClass{
 		Thread.sleep(2000);
 		
 		WebElement bankDrpDwnElement = driver.findElement(By.xpath("//select[@formcontrolname='bank_id']"));
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.elementToBeClickable(bankDrpDwnElement));
 		bankDrpDwnElement.click();
 		

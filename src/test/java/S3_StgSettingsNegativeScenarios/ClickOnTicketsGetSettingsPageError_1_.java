@@ -13,7 +13,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class ClickOnTicketsGetSettingsPageError_1_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 1)                           // Click on Ticket
+	@Test(groups = "SettingsNegative1", priority = 1)                           // Click on Ticket
 	   public void clickOnTicketsGetSettingsPageError () throws Exception {
 		
 		for(;;)

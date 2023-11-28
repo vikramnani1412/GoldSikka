@@ -10,7 +10,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class EnterOnly1FieldDetailsOfKYCModuleError_10_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 10)
+	@Test(groups = "SettingsNegative1", priority = 10)
 	  public void enterOnly1FieldDetailsOfKYCModule() throws Exception
 	  {
 		  

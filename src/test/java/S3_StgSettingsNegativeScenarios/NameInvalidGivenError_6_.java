@@ -14,7 +14,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class NameInvalidGivenError_6_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 6)             
+	@Test(groups = "SettingsNegative1", priority = 6)             
 	  public void nameInvalidGivenText() throws Exception
 	  {
 		ExcelFileUtility eUtil = new ExcelFileUtility();

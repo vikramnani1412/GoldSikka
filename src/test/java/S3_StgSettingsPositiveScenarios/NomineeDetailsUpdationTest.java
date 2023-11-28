@@ -26,7 +26,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class NomineeDetailsUpdationTest {
 
-	@Test
+	@Test(groups = "NomineeUpdation" , priority = 1)
 	public void accountUpdation() throws Exception
 	{
 		ExcelFileUtility eUtil = new ExcelFileUtility();

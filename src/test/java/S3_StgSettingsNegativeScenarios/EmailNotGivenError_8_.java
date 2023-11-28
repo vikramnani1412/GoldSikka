@@ -12,7 +12,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class EmailNotGivenError_8_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 8)                        //doubt from here not executing simply developing scripts
+	@Test(groups = "SettingsNegative1", priority = 8)                        //doubt from here not executing simply developing scripts
 	  public void emailNotGivenText() throws Exception
 	  {
 		ExcelFileUtility eUtil = new ExcelFileUtility();

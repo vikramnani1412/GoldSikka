@@ -11,7 +11,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class NomineeGivingOnlyNamePhNoAddressCityDetailsClickOnSubmit_16_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 16)
+	@Test(groups = "SettingsNegative2", priority = 16)
 	  public void nomineeGivingOnlyNamePhNoAddressCityDetailsClickOnSubmit() throws Exception
 	  {
 		  ExcelFileUtility eUtil = new ExcelFileUtility();

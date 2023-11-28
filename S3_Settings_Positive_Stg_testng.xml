@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Suite">
+  <test thread-count="1" parallel="tests" name="Test">
+  <groups>
+  <run>
+  <include name="AccountUpdation"></include>
+  <include name="KycUpdation"></include>
+  <include name="BankAcUpdation"></include>
+  <include name="AddressUpdation"></include>
+  <include name="NomineeUpdation"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="S3_StgSettingsPositiveScenarios.AddressDetailsUpdationDeletionMakingPrimaryTest"/>
+      <class name="S3_StgSettingsPositiveScenarios.NomineeDetailsUpdationTest"/>
+      <class name="S3_StgSettingsPositiveScenarios.AccountUpdationExcelTest"/>
+      <class name="S3_StgSettingsPositiveScenarios.KycUpdationTest"/>
+      <class name="S3_StgSettingsPositiveScenarios.BankAccountUpdating"/>
+    </classes>
+  </test> <!-- Test --> 
+</suite> <!-- Suite -->

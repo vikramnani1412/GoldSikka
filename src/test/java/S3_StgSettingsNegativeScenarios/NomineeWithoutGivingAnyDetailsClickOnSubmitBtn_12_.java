@@ -10,7 +10,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class NomineeWithoutGivingAnyDetailsClickOnSubmitBtn_12_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 12)
+	@Test(groups = "SettingsNegative2", priority = 12)
 	  public void nomineeWithoutGivingAnyDetailsClickOnSubmit() throws Exception
 	  {
 		  

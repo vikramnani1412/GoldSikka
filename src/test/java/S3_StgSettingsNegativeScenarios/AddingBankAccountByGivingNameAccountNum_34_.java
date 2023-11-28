@@ -13,7 +13,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AddingBankAccountByGivingNameAccountNum_34_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 34)
+	@Test(groups = "SettingsNegative4", priority = 34)
 	  public void addingBankAccountByGivingNameAccountNum() throws Exception
 	  {
 		  ExcelFileUtility eUtil = new ExcelFileUtility();

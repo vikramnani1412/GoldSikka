@@ -12,7 +12,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AddingBankAccountWithoutGivingAnyData_32_ extends BaseClass {
 
-	  @Test(groups = "Settings", priority = 32)
+	  @Test(groups = "SettingsNegative4", priority = 32)
 	  public void addingBankAccountWithoutGivingAnyData() throws Exception
 	  {
 		  driver.findElement(By.xpath("//span[.='Schemes']")).click();

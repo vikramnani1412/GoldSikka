@@ -11,7 +11,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class addressGivingOnlyNameFields_24_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 24)
+	@Test(groups = "SettingsNegative3", priority = 24)
 	  public void addressGivingOnlyNameFields() throws Exception
 	  {
 		  

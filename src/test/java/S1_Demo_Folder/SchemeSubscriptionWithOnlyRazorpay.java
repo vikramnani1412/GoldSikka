@@ -1,37 +1,21 @@
 package S1_Demo_Folder;
- 
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 import java.time.Duration;
-import java.util.NavigableMap;
 import java.util.Set;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import GenericUtility.BaseClass;
-import GenericUtility.PropertyFileUtility;
-import GenericUtility.WebDriverUtility;
-import ObjectRepository.DashboardPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 @Listeners(GenericUtility.ListnersImplementationClass.class)
-public class Demo_CreateAnAccountLoginSchemeSubscriptionWithBankingAndBookingAccLogoutTest extends BaseClass{
+public class SchemeSubscriptionWithOnlyRazorpay extends BaseClass {
 
 	@Test(groups = "Scheme")
 	public void createAnAccountLoginCreateSchemeLogoutTest() throws InterruptedException, AWTException, Exception
@@ -57,36 +41,13 @@ public class Demo_CreateAnAccountLoginSchemeSubscriptionWithBankingAndBookingAcc
 		Select s1 = new Select(months);
 		s1.selectByVisibleText("12 Months");
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		Robot r = new Robot();
-		try 
-		{
-			driver.findElement(By.xpath("//p[.='Use Booking Account']/../..//div/input[@type='checkbox']")).click();
-		} 
-		catch (Exception e) 
-		{
-			r.keyPress(KeyEvent.VK_PAGE_DOWN);
-		}
-		
-		Thread.sleep(2000);
-		
-//		driver.findElement(By.xpath("//input[@formcontrolname='enteredWalletAmount']")).sendKeys("9500");
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[.='I Agree to Terms & Conditions']/../..//input[@type='checkbox']"))).click();
 		
-		Thread.sleep(2000);
-		
-		driver.findElement(By.xpath("//input[@formcontrolname='enteredWalletAmount']")).sendKeys("9500");		
-		
 		Thread.sleep(5000);
-		
-//		String PayableAmount = driver.findElement(By.xpath("//p[text()=' Payable Amount:']/span[contains(.,'₹')]")).getText();
-//		if(!PayableAmount.equals(0))
-//		{
-//			Thread.sleep(3000);                   //This is to know that payable amount
-//			System.out.println(PayableAmount);    //got Reduced based on given amount
-//		}
 		
 		while (true)
 		{
@@ -107,7 +68,8 @@ public class Demo_CreateAnAccountLoginSchemeSubscriptionWithBankingAndBookingAcc
 		
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//button[@class='svelte-s8db8t']")).click();
+//		driver.findElement(By.xpath("//button[@class='svelte-s8db8t']")).click();
+		driver.findElement(By.xpath("//button[.='Proceed']")).click();
 		
 		Thread.sleep(2000);
 		
@@ -186,7 +148,5 @@ public class Demo_CreateAnAccountLoginSchemeSubscriptionWithBankingAndBookingAcc
 		
 		
 	}
+	
 }
-//JavascriptExecutor js = (JavascriptExecutor)driver;
-//js.executeScript("arguments[0].click()",ele);
-//driver.switchTo().alert().accept();

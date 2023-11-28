@@ -10,7 +10,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AddressWithoutGivingDataInAnyFields_23_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 23)
+	@Test(groups = "SettingsNegative3", priority = 23)
 	  public void addressWithoutGivingDataInAnyFields() throws Exception
 	  {
 		  

@@ -14,7 +14,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class NomineeGivingAllInvalidDetailsDetailsClickOnSubmit_22_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 22)    
+	@Test(groups = "SettingsNegative3", priority = 22)    
 	  public void nomineeGivingAllInvalidDetailsDetailsClickOnSubmit() throws Exception
 	  {
 		  ExcelFileUtility eUtil = new ExcelFileUtility();

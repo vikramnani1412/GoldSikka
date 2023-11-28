@@ -12,7 +12,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class DeletingPrimaryBankAccount_35_ extends BaseClass{
 
-	@Test(groups = "Settings", priority = 35)
+	@Test(groups = "SettingsNegative4", priority = 35)
 	  public void deletingPrimaryBankAccount() throws Exception
 	  {
 		  driver.findElement(By.xpath("//span[.='Schemes']")).click();

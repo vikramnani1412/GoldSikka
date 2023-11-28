@@ -10,7 +10,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class NomineeDeletion_21_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 21)
+	@Test(groups = "SettingsNegative3", priority = 21)
 	  public void nomineeDeletion() throws Exception
 	  {
 		  			  

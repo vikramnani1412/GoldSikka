@@ -12,7 +12,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class ClickOnFeedbackGetSettingsPageError_2_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 2)                           // Click on Feed Back
+	@Test(groups = "SettingsNegative1", priority = 2)                           // Click on Feed Back
 	public void clickOnFeedback () throws Exception {
 	
 	for(;;)

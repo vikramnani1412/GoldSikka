@@ -11,7 +11,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class ClearAllKYCFeildsDetailsClickOnSubmitError_9_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 9)
+	@Test(groups = "SettingsNegative1", priority = 9)
 	  public void clearAllKYCFeildDetailsClickOnSubmit() throws InterruptedException, AWTException
 	  {
 		  

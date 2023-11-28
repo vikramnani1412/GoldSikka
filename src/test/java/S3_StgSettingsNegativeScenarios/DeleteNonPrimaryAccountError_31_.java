@@ -10,7 +10,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class DeleteNonPrimaryAccountError_31_ extends BaseClass {
 	
-	@Test(groups = "Settings", priority = 31)
+	@Test(groups = "SettingsNegative4", priority = 31)
 	  public void deleteNonPrimaryAccountError() throws Exception
 	  {
 		  driver.findElement(By.xpath("//span[.='Schemes']")).click();

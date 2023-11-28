@@ -12,7 +12,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class ClickOnSettingsAndNoValuesGivingtoAllFields_3_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 3)                           // click On Settings And No Values Giving to All Fields
+	@Test(groups = "SettingsNegative1", priority = 3)                           // click On Settings And No Values Giving to All Fields
 	public void clickOnSettingsAndNoValuesGivingtoAllFields () throws Exception {
 	
 	for(;;)

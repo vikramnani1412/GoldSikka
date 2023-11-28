@@ -11,7 +11,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AddressGivingOnlyTitleCityFields_25_ extends BaseClass {
 
-	  @Test(groups = "Settings", priority = 25)
+	  @Test(groups = "SettingsNegative3", priority = 25)
 	  public void addressGivingOnlyTitleCityFields() throws Exception
 	  {
 		  ExcelFileUtility eUtil = new ExcelFileUtility();

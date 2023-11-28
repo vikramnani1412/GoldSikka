@@ -1,4 +1,4 @@
-package s2_Booking_Account_AddingAmount;
+package Xs2_Booking_Account_AddingAmount;
 
 import java.time.Duration;
 import java.util.Set;

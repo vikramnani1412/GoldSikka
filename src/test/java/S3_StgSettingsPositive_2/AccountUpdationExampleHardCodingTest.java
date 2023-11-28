@@ -1,4 +1,4 @@
-package S3_StgSettingsPositiveScenarios;
+package S3_StgSettingsPositive_2;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -25,7 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AccountUpdationExampleHardCodingTest extends BaseClass{
 
-	@Test(groups = "Account Updation" , priority = 1)
+	@Test(groups = "SettingsPositive" , priority = 1)
 	public void accountUpdationTest() throws Exception
 	{
 		for(;;)

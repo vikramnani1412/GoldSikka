@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class KycUpdationTest {
 
-	@Test(groups = "Kyc" , priority = 1)
+	@Test(groups = "KycUpdation" , priority = 1)
 	public void kycUpdation1() throws Exception
 	{
 		ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -142,7 +142,7 @@ public class KycUpdationTest {
 		
 	}
 	
-	@Test(groups = "Kyc" , priority = 2)
+	@Test(groups = "KycUpdation" , priority = 2)
 	public void kycUpdation2() throws Exception
 	{
 		ExcelFileUtility eUtil = new ExcelFileUtility();

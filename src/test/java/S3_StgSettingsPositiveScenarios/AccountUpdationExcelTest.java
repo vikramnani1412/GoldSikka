@@ -23,7 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AccountUpdationExcelTest extends BaseClass {
 	
-	@Test(groups = "ExampleHardCodingAccountUpdation1Test" , priority = 1)
+	@Test(groups = "AccountUpdation" , priority = 1)
 	public void accountUpdationTest() throws Exception
 	{
 		ExcelFileUtility eUtil = new ExcelFileUtility();

@@ -11,7 +11,7 @@ import GenericUtility.ExcelFileUtility;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AddingBankAccountByGivingOnlyName_33_ extends BaseClass {
 
-	@Test(groups = "Settings", priority = 33)
+	@Test(groups = "SettingsNegative4", priority = 33)
 	  public void addingBankAccountByGivingOnlyName() throws Exception
 	  {
 		  ExcelFileUtility eUtil = new ExcelFileUtility();
