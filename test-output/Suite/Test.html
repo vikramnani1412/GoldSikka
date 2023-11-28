@@ -55,20 +55,20 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/19/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 20 15:02:00 IST 2023</td>
+<td>Started on:</td><td>Tue Nov 28 14:21:32 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>324 seconds (324643 ms)</td>
+<tr><td>Total time:</td><td>307 seconds (307171 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>Signout Signup Login </td>
+<td>Included groups:</td><td>Signup SchemeRazorpay BookingAccount Logout SchemeBooking Login SchemeBookingBanking </td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,467 +76,83 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingPhoneNumberGivenErrorTest()'><b>whileSignIntoApplicationExistingPhoneNumberGivenErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingPhoneNumberGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:355)
+<td title='S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay.amConfig()'><b>amConfig</b><br>Test class: S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@src=&apos;../../../assets/imgs/power (2) 1.png&apos;]&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c2d3bb9316368343c4ed1013e602436, findElement {using=xpath, value=//img[@src=&apos;../../../assets/imgs/power (2) 1.png&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51373/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c2d3bb9316368343c4ed1013e602436
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at ObjectRepository.DashboardPage.logoutOfApplication(DashboardPage.java:115)
+	at GenericUtility.BaseClass.amConfig(BaseClass.java:114)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace674565687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace674565687'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingPhoneNumberGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:355)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1640273632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1640273632'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@src=&apos;../../../assets/imgs/power (2) 1.png&apos;]&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c2d3bb9316368343c4ed1013e602436, findElement {using=xpath, value=//img[@src=&apos;../../../assets/imgs/power (2) 1.png&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51373/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c2d3bb9316368343c4ed1013e602436
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at ObjectRepository.DashboardPage.logoutOfApplication(DashboardPage.java:115)
+	at GenericUtility.BaseClass.amConfig(BaseClass.java:114)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>30</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingEmailGivenErrorTest()'><b>whileSignIntoApplicationExistingEmailGivenErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingEmailGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:260)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1163578969", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1163578969'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationExistingEmailGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:260)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>32</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingAlreadyRegisteredMobileNumberOTPTest()'><b>loginByGivingAlreadyRegisteredMobileNumberOTPTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingAlreadyRegisteredMobileNumberOTPTest(Done_LoginErrors_StgTest.java:86)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2025997831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2025997831'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingAlreadyRegisteredMobileNumberOTPTest(Done_LoginErrors_StgTest.java:86)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>10</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving1stNumberAs0MobileNumberErrorTest()'><b>loginByGiving1stNumberAs0MobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving1stNumberAs0MobileNumberErrorTest(Done_LoginErrors_StgTest.java:897)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1320795518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1320795518'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving1stNumberAs0MobileNumberErrorTest(Done_LoginErrors_StgTest.java:897)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>10</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving1NumberAsMobileNumberErrorTest()'><b>loginByGiving1NumberAsMobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving1NumberAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:234)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1376899097", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1376899097'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving1NumberAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:234)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenWrongReferralCodeErrorTest()'><b>whileSignIntoApplicationGivenWrongReferralCodeErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenWrongReferralCodeErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:520)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1184855063", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1184855063'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenWrongReferralCodeErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:520)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>18</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenRightReferralCodePassedTest()'><b>whileSignIntoApplicationGivenRightReferralCodePassedTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenRightReferralCodePassedTest(Done_SignUpModuleNegativeScenarios_StgTest.java:591)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace488769353", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace488769353'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenRightReferralCodePassedTest(Done_SignUpModuleNegativeScenarios_StgTest.java:591)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>18</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingRegisteredMobileNumberPassTest()'><b>loginByGivingRegisteredMobileNumberPassTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingRegisteredMobileNumberPassTest(Done_LoginErrors_StgTest.java:756)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace396663017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace396663017'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingRegisteredMobileNumberPassTest(Done_LoginErrors_StgTest.java:756)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>10</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving10NumbersAs0MobileNumberErrorTest()'><b>loginByGiving10NumbersAs0MobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving10NumbersAs0MobileNumberErrorTest(Done_LoginErrors_StgTest.java:825)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1776969415", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1776969415'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving10NumbersAs0MobileNumberErrorTest(Done_LoginErrors_StgTest.java:825)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingMoreThan12NumbersAsMobileNumberErrorTest()'><b>loginByGivingMoreThan12NumbersAsMobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingMoreThan12NumbersAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:382)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1567947611", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1567947611'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingMoreThan12NumbersAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:382)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingMoreThan14NumbersAsMobileNumberErrorTest()'><b>loginByGivingMoreThan14NumbersAsMobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingMoreThan14NumbersAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:457)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace298250761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace298250761'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingMoreThan14NumbersAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:457)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationPhoneNumberNotGivenErrorTest()'><b>whileSignIntoApplicationPhoneNumberNotGivenErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationPhoneNumberNotGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:430)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1229988611", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1229988611'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationPhoneNumberNotGivenErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:430)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>18</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipNameErrorTest()'><b>whileSignIntoApplicationSkipNameErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipNameErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:667)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1460785158", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1460785158'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipNameErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:667)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:785)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:761)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
@@ -555,21 +171,83 @@ function toggleAllBoxes() {
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
 <td>20</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
+<td>S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay@5542c4ed</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingNotRegisteredMobileNumberErrorTest()'><b>loginByGivingNotRegisteredMobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingNotRegisteredMobileNumberErrorTest(Done_LoginErrors_StgTest.java:159)
+<td title='S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay.acConfig()'><b>acConfig</b><br>Test class: S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay</td>
+<td></td>
+<td>0</td>
+<td>S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay@5542c4ed</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay.createAnAccountLoginCreateSchemeLogoutTest()'><b>createAnAccountLoginCreateSchemeLogoutTest</b><br>Test class: S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;contact&apos;]&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c2d3bb9316368343c4ed1013e602436, findElement {using=xpath, value=//input[@id=&apos;contact&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51373/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c2d3bb9316368343c4ed1013e602436
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay.createAnAccountLoginCreateSchemeLogoutTest(SchemeSubscriptionWithOnlyRazorpay.java:67)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace502669644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace502669644'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingNotRegisteredMobileNumberErrorTest(Done_LoginErrors_StgTest.java:159)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace704790524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace704790524'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;contact&apos;]&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5c2d3bb9316368343c4ed1013e602436, findElement {using=xpath, value=//input[@id=&apos;contact&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51373/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c2d3bb9316368343c4ed1013e602436
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay.createAnAccountLoginCreateSchemeLogoutTest(SchemeSubscriptionWithOnlyRazorpay.java:67)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -591,193 +269,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving3NumbersAsMobileNumberErrorTest()'><b>loginByGiving3NumbersAsMobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving3NumbersAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:308)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1874923387", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1874923387'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGiving3NumbersAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:308)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest()'><b>whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:737)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace666697094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace666697094'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:737)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>16</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByClickingOnLoginWithGoogleErrorTest()'><b>loginByClickingOnLoginWithGoogleErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByClickingOnLoginWithGoogleErrorTest(Done_LoginErrors_StgTest.java:685)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace294458326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace294458326'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByClickingOnLoginWithGoogleErrorTest(Done_LoginErrors_StgTest.java:685)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>11</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingSpecialCharsAsMobileNumberErrorTest()'><b>loginByGivingSpecialCharsAsMobileNumberErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingSpecialCharsAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:532)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace540658725", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace540658725'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest.loginByGivingSpecialCharsAsMobileNumberErrorTest(Done_LoginErrors_StgTest.java:532)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>9</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest@76505305</td></tr>
-<tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest()'><b>whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
-<td><div><pre>java.lang.AssertionError: null
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:807)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2140538026", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2140538026'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.fail(Assert.java:115)
-	at S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest(Done_SignUpModuleNegativeScenarios_StgTest.java:807)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:471)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>18</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
+<td>51</td>
+<td>S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay@5542c4ed</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -788,15 +281,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignOutErrors_StgTest.signOutByClickingOnCancelBtnErrorTest()'><b>signOutByClickingOnCancelBtnErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignOutErrors_StgTest</td>
+<td title='S1_Demo_Folder.SignupLoginLogoutTest.signIntoApplication()'><b>signIntoApplication</b><br>Test class: S1_Demo_Folder.SignupLoginLogoutTest</td>
 <td></td>
-<td>12</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignOutErrors_StgTest@4218d6a3</td></tr>
+<td>28</td>
+<td>S1_Demo_Folder.SignupLoginLogoutTest@76505305</td></tr>
 <tr>
-<td title='S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest.whileSignIntoApplicationGivenInvalidEmailErrorTest()'><b>whileSignIntoApplicationGivenInvalidEmailErrorTest</b><br>Test class: S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest</td>
+<td title='S1_Demo_Folder.SchemeSubscriptionWithOnlyBookingAccount.createAnAccountLoginCreateSchemeLogoutTest()'><b>createAnAccountLoginCreateSchemeLogoutTest</b><br>Test class: S1_Demo_Folder.SchemeSubscriptionWithOnlyBookingAccount</td>
 <td></td>
-<td>27</td>
-<td>S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest@48f2bd5b</td></tr>
+<td>41</td>
+<td>S1_Demo_Folder.SchemeSubscriptionWithOnlyBookingAccount@815b41f</td></tr>
+<tr>
+<td title='S1_Demo_Folder.BookingAccountMoneyDepositTest.addingAmountToWalletTest()'><b>addingAmountToWalletTest</b><br>Test class: S1_Demo_Folder.BookingAccountMoneyDepositTest</td>
+<td></td>
+<td>40</td>
+<td>S1_Demo_Folder.BookingAccountMoneyDepositTest@1573f9fc</td></tr>
+<tr>
+<td title='S1_Demo_Folder.SignupLoginLogoutTest.loginToApplication()'><b>loginToApplication</b><br>Test class: S1_Demo_Folder.SignupLoginLogoutTest</td>
+<td></td>
+<td>5</td>
+<td>S1_Demo_Folder.SignupLoginLogoutTest@76505305</td></tr>
 </table><p>
 </body>
 </html>

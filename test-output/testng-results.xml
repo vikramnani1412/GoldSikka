@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-28T12:35:28 IST" name="Default suite" finished-at="2023-11-28T12:36:15 IST" duration-ms="46902">
+  <suite started-at="2023-11-28T14:26:40 IST" name="Suite" finished-at="2023-11-28T14:26:40 IST" duration-ms="0">
     <groups>
+      <group name="Signup">
+        <method signature="SignupLoginLogoutTest.signIntoApplication()[pri:1, instance:S1_Demo_Folder.SignupLoginLogoutTest@76505305]" name="signIntoApplication" class="S1_Demo_Folder.SignupLoginLogoutTest"/>
+      </group> <!-- Signup -->
+      <group name="SchemeRazorpay">
+        <method signature="SchemeSubscriptionWithOnlyRazorpay.createAnAccountLoginCreateSchemeLogoutTest()[pri:2, instance:S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay@5542c4ed]" name="createAnAccountLoginCreateSchemeLogoutTest" class="S1_Demo_Folder.SchemeSubscriptionWithOnlyRazorpay"/>
+      </group> <!-- SchemeRazorpay -->
       <group name="BookingAccount">
-        <method signature="BookingAccountMoneyDepositTest.addingAmountToWalletTest()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" name="addingAmountToWalletTest" class="S1_Demo_Folder.BookingAccountMoneyDepositTest"/>
+        <method signature="BookingAccountMoneyDepositTest.addingAmountToWalletTest()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@1573f9fc]" name="addingAmountToWalletTest" class="S1_Demo_Folder.BookingAccountMoneyDepositTest"/>
       </group> <!-- BookingAccount -->
+      <group name="Logout">
+        <method signature="SignupLoginLogoutTest.logoutOfApplication()[pri:3, instance:S1_Demo_Folder.SignupLoginLogoutTest@76505305]" name="logoutOfApplication" class="S1_Demo_Folder.SignupLoginLogoutTest"/>
+      </group> <!-- Logout -->
+      <group name="SchemeBooking">
+        <method signature="SchemeSubscriptionWithOnlyBookingAccount.createAnAccountLoginCreateSchemeLogoutTest()[pri:1, instance:S1_Demo_Folder.SchemeSubscriptionWithOnlyBookingAccount@815b41f]" name="createAnAccountLoginCreateSchemeLogoutTest" class="S1_Demo_Folder.SchemeSubscriptionWithOnlyBookingAccount"/>
+      </group> <!-- SchemeBooking -->
+      <group name="Login">
+        <method signature="SignupLoginLogoutTest.loginToApplication()[pri:2, instance:S1_Demo_Folder.SignupLoginLogoutTest@76505305]" name="loginToApplication" class="S1_Demo_Folder.SignupLoginLogoutTest"/>
+      </group> <!-- Login -->
+      <group name="SchemeBookingBanking">
+        <method signature="SchemeSubscriptionWithBankingAndBookingAccTest.createAnAccountLoginCreateSchemeLogoutTest()[pri:3, instance:S1_Demo_Folder.SchemeSubscriptionWithBankingAndBookingAccTest@7586beff]" name="createAnAccountLoginCreateSchemeLogoutTest" class="S1_Demo_Folder.SchemeSubscriptionWithBankingAndBookingAccTest"/>
+      </group> <!-- SchemeBookingBanking -->
     </groups>
-    <test started-at="2023-11-28T12:35:28 IST" name="Default test" finished-at="2023-11-28T12:36:15 IST" duration-ms="46902">
-      <class name="S1_Demo_Folder.BookingAccountMoneyDepositTest">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:35:28 IST" name="bsConfig" finished-at="2023-11-28T12:35:28 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:35:28 IST" name="bcConfig" finished-at="2023-11-28T12:35:32 IST" duration-ms="3449" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:35:32 IST" name="bmConfig" finished-at="2023-11-28T12:35:32 IST" duration-ms="118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bmConfig -->
-        <test-method signature="addingAmountToWalletTest()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:35:32 IST" name="addingAmountToWalletTest" finished-at="2023-11-28T12:36:15 IST" duration-ms="43067" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addingAmountToWalletTest -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:36:15 IST" name="amConfig" finished-at="2023-11-28T12:36:15 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:36:15 IST" name="acConfig" finished-at="2023-11-28T12:36:15 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:S1_Demo_Folder.BookingAccountMoneyDepositTest@75d4a5c2]" started-at="2023-11-28T12:36:16 IST" name="asConfig" finished-at="2023-11-28T12:36:16 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- asConfig -->
-      </class> <!-- S1_Demo_Folder.BookingAccountMoneyDepositTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+  </suite> <!-- Suite -->
 </testng-results>
