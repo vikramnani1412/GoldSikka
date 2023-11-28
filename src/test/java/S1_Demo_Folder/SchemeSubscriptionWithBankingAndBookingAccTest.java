@@ -33,7 +33,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class SchemeSubscriptionWithBankingAndBookingAccTest extends BaseClass{
 
-	@Test(groups = "Scheme")
+	@Test(groups = "SchemeBookingBanking" , priority = 3)
 	public void createAnAccountLoginCreateSchemeLogoutTest() throws InterruptedException, AWTException, Exception
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));

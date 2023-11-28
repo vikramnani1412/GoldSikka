@@ -17,7 +17,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class SchemeSubscriptionWithOnlyBookingAccount extends BaseClass {
 
-	@Test(groups = "Scheme")
+	@Test(groups = "SchemeBooking" , priority = 1)
 	public void createAnAccountLoginCreateSchemeLogoutTest() throws InterruptedException, AWTException, Exception
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));

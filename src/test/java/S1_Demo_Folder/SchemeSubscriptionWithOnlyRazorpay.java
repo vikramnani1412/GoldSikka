@@ -17,7 +17,7 @@ import GenericUtility.BaseClass;
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class SchemeSubscriptionWithOnlyRazorpay extends BaseClass {
 
-	@Test(groups = "Scheme")
+	@Test(groups = "SchemeRazorpay" , priority = 2)
 	public void createAnAccountLoginCreateSchemeLogoutTest() throws InterruptedException, AWTException, Exception
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(500));
