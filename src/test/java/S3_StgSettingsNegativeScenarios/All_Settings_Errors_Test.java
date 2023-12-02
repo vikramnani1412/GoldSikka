@@ -1978,7 +1978,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 			}
 		  
 		   
-		   @Test(groups = "SettingsNegative3", priority = 38)    
+		   @Test(groups = "SettingsNegative4", priority = 38)    
 			  public void nomineeGivingSpecialCharsInAllFieldsClickOnSubmitErrorTest () throws Exception
 			  {
 				  ExcelFileUtility eUtil = new ExcelFileUtility();
