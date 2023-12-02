@@ -822,6 +822,7 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 	@Test(groups = "Signup" , priority = 9)                        //Giving Invalid email error
 	 public void whileSignIntoApplicationGivenInvalidEmailErrorTest() throws Exception     //Not giving @gmail.com
 	 {
+		JavaUtility jUtil = new JavaUtility();
 		WebDriverUtility wUtil = new WebDriverUtility();
 		String methodName = "whileSignIntoApplicationGivenInvalidEmailErrorTest";
 		
@@ -845,7 +846,7 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		
 		Thread.sleep(2000);
 		
-		driver.findElement(By.xpath("//input[@placeholder='Enter mobile number']")).sendKeys("8331827873");
+		driver.findElement(By.xpath("//input[@placeholder='Enter mobile number']")).sendKeys("987"+jUtil.getRandomNum());                   
 		
 		Thread.sleep(2000);
 		
@@ -906,5 +907,364 @@ public class Done_SignUpModuleNegativeScenarios_StgTest {
 		
 		
 	}
+	
+	@Test(groups = "Signup" , priority = 10)                        //Giving Mobile Num As Alphabets error
+	 public void whileSignIntoApplicationGivenMobileNumAsAlphabetsErrorTest() throws Exception     //Not giving @gmail.com
+	 {
+		JavaUtility jUtil = new JavaUtility();
+		WebDriverUtility wUtil = new WebDriverUtility();
+		String methodName = "whileSignIntoApplicationGivenInvalidEmailErrorTest";
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://stg-new-wallet.goldsikka.com/");
+		driver.findElement(By.xpath("//a[.='Sign Up']")).click();
+		WebElement AccType  = driver.findElement(By.xpath("//select[@formcontrolname='roleType']"));
+		Select s = new Select(AccType);
+		s.selectByVisibleText("Personal Account");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys("Gvc");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter email address']")).sendKeys("pavanikaka"+jUtil.getRandomNum()+"@gmail.com");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter mobile number']")).sendKeys("abcdefghij");
+		
+		Thread.sleep(2000);
+		
+		WebElement ele = driver.findElement(By.xpath("//select[@formcontrolname='heard_us']"));
+		Select ss = new Select(ele);
+		ss.selectByVisibleText("Social Media Add");
+		
+		Thread.sleep(2000);
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_PAGE_DOWN);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your referral code']")).sendKeys("");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+	    
+		r.keyPress(KeyEvent.VK_PAGE_UP);
+		r.keyRelease(KeyEvent.VK_PAGE_UP);
+		
+		Thread.sleep(2000);
+		
+		//Email skipped error
+		try 
+		{
+			WebElement SkippedEmailError = driver.findElement(By.xpath("//label[text()='Email ']//following-sibling::div[.='This field is required ']"));
+			String SkippedEmailErrorMsg = SkippedEmailError.getText();
+			if(SkippedEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Incorrect E-mail "+SkippedEmailErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}			
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		
+		//Given invalid email error
+		try 
+		{
+			WebElement GivenInvalidEmailError = driver.findElement(By.xpath("//label[text()='Email ']/following-sibling::div[.='Please Enter Correct Email ']"));
+			String InvalidEmailGivenErrorMsg = GivenInvalidEmailError.getText();
+			if(GivenInvalidEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Correct E-mail "+InvalidEmailGivenErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		finally
+		{
+			driver.quit();
+		}
+		
+		
+	}
+	
+	@Test(groups = "Signup" , priority = 11)                        //Giving Mobile Num As Special Chars error
+	 public void whileSignIntoApplicationGivenMobileNumAsSpecialCharsErrorTest() throws Exception     //Not giving @gmail.com
+	 {
+		JavaUtility jUtil = new JavaUtility();
+		WebDriverUtility wUtil = new WebDriverUtility();
+		String methodName = "whileSignIntoApplicationGivenInvalidEmailErrorTest";
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://stg-new-wallet.goldsikka.com/");
+		driver.findElement(By.xpath("//a[.='Sign Up']")).click();
+		WebElement AccType  = driver.findElement(By.xpath("//select[@formcontrolname='roleType']"));
+		Select s = new Select(AccType);
+		s.selectByVisibleText("Personal Account");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys("Gvc");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter email address']")).sendKeys("pavanikaka"+jUtil.getRandomNum()+"@gmail.com");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter mobile number']")).sendKeys("!@#$%^&*()");
+		
+		Thread.sleep(2000);
+		
+		WebElement ele = driver.findElement(By.xpath("//select[@formcontrolname='heard_us']"));
+		Select ss = new Select(ele);
+		ss.selectByVisibleText("Social Media Add");
+		
+		Thread.sleep(2000);
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_PAGE_DOWN);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your referral code']")).sendKeys("");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+	    
+		r.keyPress(KeyEvent.VK_PAGE_UP);
+		r.keyRelease(KeyEvent.VK_PAGE_UP);
+		
+		Thread.sleep(2000);
+		
+		//Email skipped error
+		try 
+		{
+			WebElement SkippedEmailError = driver.findElement(By.xpath("//label[text()='Email ']//following-sibling::div[.='This field is required ']"));
+			String SkippedEmailErrorMsg = SkippedEmailError.getText();
+			if(SkippedEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Incorrect E-mail "+SkippedEmailErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}			
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		
+		//Given invalid email error
+		try 
+		{
+			WebElement GivenInvalidEmailError = driver.findElement(By.xpath("//label[text()='Email ']/following-sibling::div[.='Please Enter Correct Email ']"));
+			String InvalidEmailGivenErrorMsg = GivenInvalidEmailError.getText();
+			if(GivenInvalidEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Correct E-mail "+InvalidEmailGivenErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		finally
+		{
+			driver.quit();
+		}
+		
+		
+	}
+	
+	    
+	@Test(groups = "Signup" , priority = 12)                        //Giving Numbers and Special Chars As Email error
+	 public void whileSignIntoApplicationGivenEmailAsOnlyNumersAndSpecialCharsErrorTest() throws Exception     //Not giving @gmail.com
+	 {
+		JavaUtility jUtil = new JavaUtility();
+		WebDriverUtility wUtil = new WebDriverUtility();
+		String methodName = "whileSignIntoApplicationGivenInvalidEmailErrorTest";
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://stg-new-wallet.goldsikka.com/");
+		driver.findElement(By.xpath("//a[.='Sign Up']")).click();
+		WebElement AccType  = driver.findElement(By.xpath("//select[@formcontrolname='roleType']"));
+		Select s = new Select(AccType);
+		s.selectByVisibleText("Personal Account");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys("Gvc");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter email address']")).sendKeys(jUtil.getRandomNum()+"#$@gmail.com");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter mobile number']")).sendKeys("987"+jUtil.getRandomNum());
+		
+		Thread.sleep(2000);
+		
+		WebElement ele = driver.findElement(By.xpath("//select[@formcontrolname='heard_us']"));
+		Select ss = new Select(ele);
+		ss.selectByVisibleText("Social Media Add");
+		
+		Thread.sleep(2000);
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_PAGE_DOWN);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your referral code']")).sendKeys("");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+	    
+		r.keyPress(KeyEvent.VK_PAGE_UP);
+		r.keyRelease(KeyEvent.VK_PAGE_UP);
+		
+		Thread.sleep(2000);
+		
+		//Email skipped error
+		try 
+		{
+			WebElement SkippedEmailError = driver.findElement(By.xpath("//label[text()='Email ']//following-sibling::div[.='This field is required ']"));
+			String SkippedEmailErrorMsg = SkippedEmailError.getText();
+			if(SkippedEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Incorrect E-mail "+SkippedEmailErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}			
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		
+		//Given invalid email error
+		try 
+		{
+			WebElement GivenInvalidEmailError = driver.findElement(By.xpath("//label[text()='Email ']/following-sibling::div[.='Please Enter Correct Email ']"));
+			String InvalidEmailGivenErrorMsg = GivenInvalidEmailError.getText();
+			if(GivenInvalidEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Correct E-mail "+InvalidEmailGivenErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		finally
+		{
+			driver.quit();
+		}
+		
+		
+	}
+	
+	
+	@Test(groups = "Signup" , priority = 12)                        //Giving Special Chars As Email error
+	 public void whileSignIntoApplicationGivenEmailAsOnlySpecialCharsErrorTest() throws Exception     //Not giving @gmail.com
+	 {
+		JavaUtility jUtil = new JavaUtility();
+		WebDriverUtility wUtil = new WebDriverUtility();
+		String methodName = "whileSignIntoApplicationGivenInvalidEmailErrorTest";
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://stg-new-wallet.goldsikka.com/");
+		driver.findElement(By.xpath("//a[.='Sign Up']")).click();
+		WebElement AccType  = driver.findElement(By.xpath("//select[@formcontrolname='roleType']"));
+		Select s = new Select(AccType);
+		s.selectByVisibleText("Personal Account");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@formcontrolname='name']")).sendKeys("Gvc");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter email address']")).sendKeys("!@#$%^&*()@gmail.com");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Enter mobile number']")).sendKeys("987"+jUtil.getRandomNum());
+		
+		Thread.sleep(2000);
+		
+		WebElement ele = driver.findElement(By.xpath("//select[@formcontrolname='heard_us']"));
+		Select ss = new Select(ele);
+		ss.selectByVisibleText("Social Media Add");
+		
+		Thread.sleep(2000);
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_PAGE_DOWN);
+		driver.findElement(By.xpath("//input[@placeholder='Enter your referral code']")).sendKeys("");
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+	    
+		r.keyPress(KeyEvent.VK_PAGE_UP);
+		r.keyRelease(KeyEvent.VK_PAGE_UP);
+		
+		Thread.sleep(2000);
+		
+		//Email skipped error
+		try 
+		{
+			WebElement SkippedEmailError = driver.findElement(By.xpath("//label[text()='Email ']//following-sibling::div[.='This field is required ']"));
+			String SkippedEmailErrorMsg = SkippedEmailError.getText();
+			if(SkippedEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Incorrect E-mail "+SkippedEmailErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}			
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		
+		//Given invalid email error
+		try 
+		{
+			WebElement GivenInvalidEmailError = driver.findElement(By.xpath("//label[text()='Email ']/following-sibling::div[.='Please Enter Correct Email ']"));
+			String InvalidEmailGivenErrorMsg = GivenInvalidEmailError.getText();
+			if(GivenInvalidEmailError.isDisplayed())
+			{
+			   System.out.println("You have not entered Correct E-mail "+InvalidEmailGivenErrorMsg);
+			   wUtil.takeScreenShot(driver, methodName);
+			}
+		}
+		catch (Exception e) 
+		{
+			Thread.sleep(1);
+		}
+		finally
+		{
+			driver.quit();
+		}
+		
+		
+	}
+	    
 	
 }

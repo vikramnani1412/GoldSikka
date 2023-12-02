@@ -98,7 +98,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 	}
 		
 		@Test(groups = "SettingsNegative1", priority = 3)              // click On Settings And Giving Null Values Giving to All Fields
-		public void clickOnSettingsAndNoValuesGivingtoAllFieldsErrorTest () throws Exception {
+		public void clickOnSettingsAndNoValuesGivingtoAllAccountFieldsErrorTest () throws Exception {
 		
 		for(;;)
 		{
@@ -154,7 +154,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
         
 		@Test(groups = "SettingsNegative1", priority = 4)     // click On Settings And Giving Invalid Details to Account All Fields--> 1
-		public void clickOnSettingsAndGivingInvalidDetailstoAllFieldsErrorTest () throws Exception {
+		public void clickOnSettingsAndGivingInvalidDetailstoAllAccountFieldsErrorTest () throws Exception {
 		
 		ExcelFileUtility eUtil = new ExcelFileUtility();
 		String Name = eUtil.readDataFromExcel("Settings", 40, 1);
@@ -260,7 +260,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		}
 		
 		  @Test(groups = "SettingsNegative1", priority = 6)    // Name not given error
-		  public void nameNotGivenErrorErrorTest() throws Exception
+		  public void AccountNameNotGivenErrorTest() throws Exception
 		  {
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 //			String Name = eUtil.readDataFromExcel("Settings", 40, 3);
@@ -323,7 +323,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
 		  
 		  @Test(groups = "SettingsNegative1", priority = 7)      // 0 Given as mobile num error
-		  public void mobileNumGiven0ErrorTest() throws Exception
+		  public void AccountMobileNumGiven0ErrorTest() throws Exception
 		  {
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Name = eUtil.readDataFromExcel("Settings", 40, 4);
@@ -375,7 +375,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  
 		  
 		  @Test(groups = "SettingsNegative1", priority = 8)         // Email Not Given Error
-		  public void emailNotGivenTextErrorTest() throws Exception
+		  public void AccountEmailNotGivenTextErrorTest() throws Exception
 		  {
 			JavaUtility jUtil = new JavaUtility();
 			ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -1847,117 +1847,219 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
+		   @Test(groups = "SettingsNegative4", priority = 36)    //Giving Email As Special Chars error
+		   public void EmailSpecialCharsGivenErrorTest() throws Exception
+		   {
+			  JavaUtility jUtil = new JavaUtility();
+				ExcelFileUtility eUtil = new ExcelFileUtility();
+				String Name = eUtil.readDataFromExcel("Settings", 40, 7);
+				String Email = eUtil.readDataFromExcel("Settings", 41, 7);
+				String MobileNo = eUtil.readDataFromExcel("Settings", 42, 7);
+					
+				driver.findElement(By.xpath("//span[.='Schemes']")).click();
+				
+				for(;;)
+				{
+				try 
+				{
+					driver.findElement(By.xpath("//span[.='Settings']")).click();
+					break;
+				}
+				catch(Exception e)
+				{
+					Robot r = new Robot();
+					r.keyPress(KeyEvent.VK_DOWN);
+					r.keyRelease(KeyEvent.VK_DOWN);
+				}}
+				
+				driver.findElement(By.xpath("//span[.='Settings']")).click();
+				
+				driver.findElement(By.xpath("//a[.=' Account']"));
+				
+				Thread.sleep(3000);
+				
+				WebElement name = driver.findElement(By.xpath("//input[@placeholder='Enter Name']"));
+				name.clear();
+				name.sendKeys(Name);
+				Thread.sleep(2000);
+				
+				WebElement email = driver.findElement(By.xpath("//input[@placeholder='Enter Your Email']"));
+				email.clear();
+				email.sendKeys(Email);
+				Thread.sleep(2000);
+				
+				WebElement PhoneNo = driver.findElement(By.xpath("//input[@placeholder='Enter Your Mobile Number']"));
+				PhoneNo.clear();
+				PhoneNo.sendKeys(MobileNo+jUtil.getRandomNum());
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//button[.='Submit']")).click();
+			    
+				String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+				System.out.println(SuccessMsg);
+				
+				
+			}
+		   
+		   
+		   @Test(groups = "SettingsNegative4", priority = 37)    //Giving Email As Special Chars error
+		   public void KycPanDetailsAsSpecialCharsGivenErrorTest() throws Exception
+		   {
+			    ExcelFileUtility eUtil = new ExcelFileUtility();
+				String FatherName = eUtil.readDataFromExcel("Settings", 46, 2);
+				String SpouseName = eUtil.readDataFromExcel("Settings", 47, 2);
+				String AlternatePhNo = eUtil.readDataFromExcel("Settings", 48, 2);
+				String PanNo = eUtil.readDataFromExcel("Settings", 49, 2);
+				String AadhaarNo = eUtil.readDataFromExcel("Settings", 50, 2);
+					
+				driver.findElement(By.xpath("//span[.='Schemes']")).click();
+				
+				for(;;)
+				{
+				try 
+				{
+					driver.findElement(By.xpath("//span[.='Settings']")).click();
+					break;
+				}
+				catch(Exception e)
+				{
+					Robot r = new Robot();
+					r.keyPress(KeyEvent.VK_DOWN);
+					r.keyRelease(KeyEvent.VK_DOWN);
+				}}
+				
+				driver.findElement(By.xpath("//span[.='Settings']")).click();
+				
+				driver.findElement(By.xpath("//a[@href='/settings/kyc']")).click();
+				
+				Thread.sleep(3000);
+							
+				driver.findElement(By.xpath("//button[.=' Update Kyc ']")).click();
+				
+				Thread.sleep(3000);
+				
+				WebElement FathernameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Father Name']"));
+				FathernameEdt.clear();
+				FathernameEdt.sendKeys(FatherName);
+				Thread.sleep(2000);
+							
+				WebElement SpouseNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Spouse Name']"));
+				SpouseNameEdt.clear();
+				SpouseNameEdt.sendKeys(SpouseName);
+				Thread.sleep(2000);
+				
+				WebElement AltPhoneNo = driver.findElement(By.xpath("//input[@placeholder='Enter Alternate Phone No']"));
+				AltPhoneNo.clear();
+				AltPhoneNo.sendKeys(AlternatePhNo);
+				Thread.sleep(2000);
+				
+				WebElement PanNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter PAN No']"));
+				PanNoEdt.clear();
+				PanNoEdt.sendKeys(PanNo);
+				Thread.sleep(2000);
+				
+				WebElement AadharNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Aadhaar No']"));
+				AadharNoEdt.clear();
+				AadharNoEdt.sendKeys(AadhaarNo);
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//input[@value='M']")).click();
+				
+				Thread.sleep(3000);
+				
+				driver.findElement(By.xpath("//button[.='Submit']")).click();
+				
+				Thread.sleep(3000);
+			    
+				String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+				System.out.println(SuccessMsg);
+				
+				
+			}
+		  
+		   
+		   @Test(groups = "SettingsNegative3", priority = 38)    
+			  public void nomineeGivingSpecialCharsInAllFieldsClickOnSubmitErrorTest () throws Exception
+			  {
+				  ExcelFileUtility eUtil = new ExcelFileUtility();
+				  String Name = eUtil.readDataFromExcel("Settings", 54, 3);
+				  String PhoneNo = eUtil.readDataFromExcel("Settings", 55, 3);
+				  String Address = eUtil.readDataFromExcel("Settings", 56, 3);
+				  String City = eUtil.readDataFromExcel("Settings", 57, 3);
+				  String State = eUtil.readDataFromExcel("Settings", 58, 3);
+				  String Country = eUtil.readDataFromExcel("Settings", 59, 3);
+				  String Pincode = eUtil.readDataFromExcel("Settings", 60, 3);
+				  String Relation = eUtil.readDataFromExcel("Settings", 61, 3);
+				  
+				  
+				  driver.findElement(By.xpath("//span[.='Schemes']")).click();
+				
+				  for(;;)
+				  {
+				  try 
+				  {
+					 driver.findElement(By.xpath("//span[.='Settings']")).click();
+					 break;
+				  }
+				  catch(Exception e)
+				  {
+					 Robot r = new Robot();
+					 r.keyPress(KeyEvent.VK_DOWN);
+					 r.keyRelease(KeyEvent.VK_DOWN);
+				   }}
+					
+				   driver.findElement(By.xpath("//span[.='Settings']")).click();
+					
+				   driver.findElement(By.xpath("//a[.=' Nominee Details ']")).click();
+					
+				   Thread.sleep(3000);
+					
+				   driver.findElement(By.xpath("//a[@routerlink='./add']")).click();
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Name']")).sendKeys(Name);
+				   
+				   Thread.sleep(3000);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Number']")).sendKeys(PhoneNo);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Address']")).sendKeys(Address);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter City']")).sendKeys(City);
+				   
+	               Thread.sleep(3000);
+				   
+				   WebElement state = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
+				   
+				   Select s = new Select(state);
+				   s.selectByVisibleText(State);
+				   
+				   Thread.sleep(3000);
+				   
+				   WebElement country = driver.findElement(By.xpath("//select[@formcontrolname='country_id']"));
+				   
+				   Select ss = new Select(country);
+				   ss.selectByVisibleText(Country);
+				   
+				   Thread.sleep(3000);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']")).sendKeys(Pincode);
+				   
+				   WebElement relation = driver.findElement(By.xpath("//select[@formcontrolname='relation']"));
+				   
+				   Select sss = new Select(relation);
+				   sss.selectByVisibleText(Relation);
+				   
+				   driver.findElement(By.xpath("//button[.='Submit']")).click();
+					
+				   driver.findElement(By.xpath("abc")).click();
+						
+					
+			  }
+		   
+		  
 		  
 		  
    }
 	
 	
 	
-/*
- * Robot r = new Robot();  //8
- * r.keyPress(KeyEvent.Vk_TAB);
- * r.keyRelease(KeyEvent.Vk_TAB);
- */
-
-
-
-
-
-//try {
-//	if(NameError.isDisplayed())
-//	{
-//		System.out.println(Input1);
-//		Assert.fail();
-//	}
-//} catch (Exception e) {
-//	Thread.sleep(1000);
-//}
-//try {
-//	if (EmailError.isDisplayed()) 
-//	{
-//		System.out.println(Input2);
-//		Assert.fail();
-//	}
-//} catch (Exception e) {
-//	Thread.sleep(1000);
-//}
-//try {
-//	if (MobileError.isDisplayed()) 
-//	{
-//		System.out.println(Input3);
-//		Assert.fail();
-//	}
-//} catch (Exception e) {
-//	Thread.sleep(1000);
-//}
-//try {
-//	if (InvalidDetailsError.isDisplayed()); 
-//	{
-//		System.out.println(Input4);
-//		Assert.fail();
-//	}
-//} catch (Exception e) {
-//	Thread.sleep(1000);
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//if(NameErrorMsg.contains("required"))
-//{
-//	Assert.fail();
-//}
-//else if (EmailErrorMsg.contains("required")) 
-//{
-//	Assert.fail();
-//}
-//else if (MobileErrorMsg.contains("required")) 
-//{
-//	Assert.fail();
-//}
-//
-////try
-////{
-////	WebElement NameError = driver.findElement(By.xpath("//p[text()='Name']/../following-sibling::div[.='This field is required']"));
-////	String NameErrorMsg = NameError.getText();
-////	
-////	WebElement EmailError = driver.findElement(By.xpath("//p[text()='Email']/../following-sibling::div/div[.='This field is required ']"));
-////	String EmailErrorMsg = EmailError.getText();
-////	
-////	WebElement MobileError = driver.findElement(By.xpath("//p[text()='Mobile']/../following-sibling::div/div[.='This field is required ']"));
-////	String MobileErrorMsg = MobileError.getText();
-////	
-////	if(NameErrorMsg.contains("required"))
-////	{
-////		Assert.fail();
-////	}
-////	else if (EmailErrorMsg.contains("required")) 
-////	{
-////		Assert.fail();
-////	}
-////	else if (MobileErrorMsg.contains("required")) 
-////	{
-////		Assert.fail();
-////	}
-////}
-////catch(Exception e)
-////{
-////	Thread.sleep(1);
-////}

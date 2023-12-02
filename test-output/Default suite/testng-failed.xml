@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="S1_Demo_Folder.BookingAccountMoneyDepositTest">
+      <class name="S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test">
         <methods>
           <include name="amConfig"/>
           <include name="acConfig"/>
-          <include name="addingAmountToWalletTest"/>
           <include name="asConfig"/>
+          <include name="deletingPrimaryBankAccountErrorTest"/>
           <include name="bsConfig"/>
-          <include name="bcConfig"/>
           <include name="bmConfig"/>
+          <include name="bcConfig"/>
         </methods>
-      </class> <!-- S1_Demo_Folder.BookingAccountMoneyDepositTest -->
+      </class> <!-- S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,43 +2,36 @@ package S3_StgSettingsPositiveScenarios;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.time.Duration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import GenericUtility.BaseClass;
 import GenericUtility.ExcelFileUtility;
-import GenericUtility.PropertyFileUtility;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import GenericUtility.JavaUtility;
 
 @Listeners(GenericUtility.ListnersImplementationClass.class)
 public class AccountUpdationExcelTest extends BaseClass {
 	
 	@Test(groups = "AccountUpdation" , priority = 1)
-	public void accountUpdationTest() throws Exception
+	public void accountUpdationTest() throws Exception 
 	{
+		JavaUtility jUtil = new JavaUtility();
 		ExcelFileUtility eUtil = new ExcelFileUtility();
 		String Name = eUtil.readDataFromExcel("Settings",1,6);
 		String Mail = eUtil.readDataFromExcel("Settings",2,6);
 		String PhNo = eUtil.readDataFromExcel("Settings",3,6);
-		
-		
+		 
 		for(;;)
 		{
+			Thread.sleep(3000);
 		try 
 		{
+			
 			driver.findElement(By.xpath("//span[.='Settings']")).click();
 			break;
-		}
+		} 
 		catch(Exception e)
 		{
 			Robot r = new Robot();
@@ -46,20 +39,24 @@ public class AccountUpdationExcelTest extends BaseClass {
 			r.keyRelease(KeyEvent.VK_DOWN);
 		}}
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[.=' Account']")).click();
 		
+		Thread.sleep(3000);
 		WebElement NameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Name']"));
 		NameEdt.clear();
-		NameEdt.sendKeys(Name);
+		NameEdt.sendKeys(Name+jUtil.getRandomNum());
 		
+		Thread.sleep(3000);
 		WebElement EmailEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Your Email']"));
 		EmailEdt.clear();
 		EmailEdt.sendKeys(Mail);
 		
-		WebElement MobileNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Your Mobile Number']"));
+		Thread.sleep(3000);WebElement MobileNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Your Mobile Number']"));
 		MobileNoEdt.clear();
 		MobileNoEdt.sendKeys(PhNo);
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[.='Submit']")).click();
 		
 		try
@@ -75,7 +72,7 @@ public class AccountUpdationExcelTest extends BaseClass {
 			System.out.println(dangerMsg);
 			Assert.fail();
 		}
-		
+		Thread.sleep(3000);
 	}
 	
 }

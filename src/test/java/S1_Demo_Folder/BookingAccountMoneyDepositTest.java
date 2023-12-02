@@ -61,8 +61,8 @@ public class BookingAccountMoneyDepositTest extends BaseClass {
 			String parentWindow = driver.getWindowHandle();
 			
 			driver.findElement(By.xpath("//button[.='Pay Now']")).click();
-			
 //			driver.findElement(By.className("svelte-s8db8t")).click();
+			
 			Set<String> childWindow = driver.getWindowHandles();
 			
 			for(String childid : childWindow)

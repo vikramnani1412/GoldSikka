@@ -110,16 +110,16 @@ public class BaseClass {
 	@AfterMethod(groups={"Signup","Login","Schemes","BookingAccount","expSchemes","expBookingAccount","Scheme","Deposit","Withdrawl" })
 		public void amConfig() throws Exception
 		{
-		    DashboardPage dPage = new DashboardPage(driver);
-		    dPage.logoutOfApplication(driver);
-		    System.out.println("Logout Successfully");
+//		    DashboardPage dPage = new DashboardPage(driver);
+//		    dPage.logoutOfApplication(driver);
+//		    System.out.println("Logout Successfully");
 		}
         
 	@AfterClass(groups={"Signup","Login","Schemes","BookingAccount","expSchemes","expBookingAccount","Scheme","Deposit","Withdrawl" })
 		public void acConfig()
 		{
-		    driver.quit();
-			System.out.println("Browser Closed Successfully");
+//		    driver.quit();
+//			System.out.println("Browser Closed Successfully");
 		}
         
 	@AfterSuite(groups={"Signup","Login","Schemes","BookingAccount","expSchemes","expBookingAccount","Scheme","Deposit","Withdrawl" })

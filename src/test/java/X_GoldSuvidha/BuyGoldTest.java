@@ -1,15 +1,9 @@
 package X_GoldSuvidha;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.Set;
-
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +15,6 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
 import GenericUtility.ConstantsUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 

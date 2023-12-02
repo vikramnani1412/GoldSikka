@@ -39,6 +39,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 		
 		for(;;)
 		{
+			Thread.sleep(3000);
 		try 
 		{
 			driver.findElement(By.xpath("//span[.='Settings']")).click();
@@ -51,25 +52,34 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 			r.keyRelease(KeyEvent.VK_DOWN);
 		}}
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@href='/settings/addresses/add']")).click();
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter Title']")).sendKeys(Title);
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter City']")).sendKeys(City);
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']")).sendKeys(PinCode);
 		
+		Thread.sleep(3000);
 		WebElement State = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
 		
 		Select s = new Select(State);
 		s.selectByVisibleText(StateValue);
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter Address']")).sendKeys(Address);
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[.='Submit']")).click();
 		
+		Thread.sleep(3000);
 		String RecentlyAddedAddress = driver.findElement(By.xpath("//h5[contains(.,'"+Title+"')]")).getText();
 		                                                               
 		if(RecentlyAddedAddress.contains(Title))
@@ -80,7 +90,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 		{
 			System.out.println("Address Not Added Successfully");
 		}
-	}// Upto here Doneeeee
+	}
 	
 		
 	@Test(groups = "AddressUpdation" , priority = 2)
@@ -92,6 +102,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 		
 		for(;;)
 		{
+			Thread.sleep(3000);
 		try 
 		{
 			driver.findElement(By.xpath("//span[.='Settings']")).click();
@@ -104,12 +115,16 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 			r.keyRelease(KeyEvent.VK_DOWN);
 		}}
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
 		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//h5[.=' "+Title+" ']/../following-sibling::div[@class='col-lg-6']//a[.='Set As Primary']")).click();
 		
+		Thread.sleep(3000);
 		String AfterSettingPrimaryConformationMsg = driver.findElement(By.xpath("//h5[.=' "+Title+" '] /../following-sibling::div//a[.=' Primary']")).getText();
 		
+		Thread.sleep(3000);
 		if(AfterSettingPrimaryConformationMsg.equalsIgnoreCase("Primary"))
 		{
 			System.out.println(Title+" Address setted as Primary Address");
@@ -126,7 +141,6 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 		{
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Title = eUtil.readDataFromExcel("Settings",23,1);
-			
 			String EditTitle = eUtil.readDataFromExcel("Settings",23,2);
 			String EditAddress = eUtil.readDataFromExcel("Settings",24,2);
 			String EditCity = eUtil.readDataFromExcel("Settings",25,2);
@@ -136,6 +150,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 			
 			for(;;)
 			{
+				Thread.sleep(3000);
 			try 
 			{
 				driver.findElement(By.xpath("//span[.='Settings']")).click();
@@ -148,31 +163,38 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 				r.keyRelease(KeyEvent.VK_DOWN);
 			}}
 			
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
 		    
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("(//h5[text()=' Staging '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
-			                                                  
+			
+			Thread.sleep(3000);
 			WebElement TitleEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Title']"));
 			TitleEdt.clear();
 			TitleEdt.sendKeys(EditTitle);
 			
+			Thread.sleep(3000);
 			WebElement AddressEdt = driver.findElement(By.xpath("//textarea[@placeholder='Enter Address']"));
 			AddressEdt.clear();
 			AddressEdt.sendKeys(EditAddress);
 			
+			Thread.sleep(3000);
 			WebElement CityEdt = driver.findElement(By.xpath("//input[@placeholder='Enter city']"));
 			CityEdt.clear();
 			CityEdt.sendKeys(EditCity);
 			
+			Thread.sleep(3000);
 			WebElement State = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
-			
 			Select s = new Select(State);
 			s.selectByVisibleText(EditStateValue);
 			
+			Thread.sleep(3000);
 			WebElement PincodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']"));
 			PincodeEdt.clear();
 			PincodeEdt.sendKeys(EditPinCode);
 			
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("//button[.=' Submit ']")).click();
 			
 			try
@@ -197,6 +219,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 			
 			for(;;)
 			{
+				Thread.sleep(3000);
 			try 
 			{
 				driver.findElement(By.xpath("//span[.='Settings']")).click();
@@ -209,10 +232,13 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 				r.keyRelease(KeyEvent.VK_DOWN);
 			}}
 			
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
-			Thread.sleep(1000);
+			
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-trash-alt']")).click();
-			                            
+			
+			Thread.sleep(3000);
 			driver.switchTo().alert().accept();
 					
 			try

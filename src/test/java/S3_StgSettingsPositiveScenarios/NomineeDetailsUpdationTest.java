@@ -2,29 +2,17 @@ package S3_StgSettingsPositiveScenarios;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.time.Duration;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+import GenericUtility.BaseClass;
 import GenericUtility.ExcelFileUtility;
-import GenericUtility.PropertyFileUtility;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class NomineeDetailsUpdationTest {
+@Listeners(GenericUtility.ListnersImplementationClass.class)
+public class NomineeDetailsUpdationTest extends BaseClass {
 
 	@Test(groups = "NomineeUpdation" , priority = 1)
 	public void accountUpdation() throws Exception
@@ -39,46 +27,6 @@ public class NomineeDetailsUpdationTest {
 		String Pincode = eUtil.readDataFromExcel("Settings",19,6);
 		String Relation = eUtil.readDataFromExcel("Settings",20,6);
 		
-		PropertyFileUtility pUtil = new PropertyFileUtility();
-		String BROWSER = pUtil.readDataFromPropertyFile("browser");
-		String USERNAME = pUtil.readDataFromPropertyFile("usernamee");
-		String URL = pUtil.readDataFromPropertyFile("stgurl");
-		
-		WebDriver driver = null;
-		
-		if(BROWSER.equalsIgnoreCase("Chrome"))
-		{
-			ChromeOptions option = new ChromeOptions();
-			option.addArguments("--disable-Notifications=*");
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(option);
-		}
-		else if(BROWSER.equalsIgnoreCase("Firefox"))
-		{
-			
-			FirefoxOptions options = new FirefoxOptions();
-
-	        // Create a FirefoxProfile to manage preferences
-	        FirefoxProfile profile = new FirefoxProfile();
-
-	        // Set a preference to allow or deny location access (false to deny)
-	        profile.setPreference("geo.prompt.testing", true);
-	        profile.setPreference("geo.prompt.testing.allow", false);
-
-	        // Assign the profile to the FirefoxOptions
-	        options.setProfile(profile);
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver(options);
-		}
-		else 
-		{
-			System.out.println("Invalid");
-		}
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(URL);
-		driver.findElement(By.xpath("//input[@placeholder='Email/Phone Number']")).sendKeys(USERNAME,Keys.ENTER);
 		for(;;)
 		{
 		try 
@@ -172,12 +120,12 @@ public class NomineeDetailsUpdationTest {
 			}
 			Thread.sleep(5000);
 			
-			WebElement DeleteNomineeBtn = driver.findElement(By.xpath("//span[.='"+Name+"']/../../../../preceding-sibling::div//i[@class='far fa-trash-alt']"));
-			DeleteNomineeBtn.click();
-			driver.switchTo().alert().accept();
-			WebElement NomineeDeleteConformationMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
-			String nomineeDeleteConformationMsg = NomineeDeleteConformationMsg.getText();
-			System.out.println(nomineeDeleteConformationMsg);
+//			WebElement DeleteNomineeBtn = driver.findElement(By.xpath("//span[.='"+Name+"']/../../../../preceding-sibling::div//i[@class='far fa-trash-alt']"));
+//			DeleteNomineeBtn.click();
+//			driver.switchTo().alert().accept();
+//			WebElement NomineeDeleteConformationMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
+//			String nomineeDeleteConformationMsg = NomineeDeleteConformationMsg.getText();
+//			System.out.println(nomineeDeleteConformationMsg);
 			
 		}
 		

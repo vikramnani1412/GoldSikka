@@ -4,39 +4,48 @@
   <test thread-count="1" parallel="tests" name="Test(failed)">
     <groups>
       <run>
-        <include name="Signup"/>
-        <include name="Login"/>
-        <include name="Signout"/>
+        <include name="Schemes"/>
+        <include name="BookingAccount"/>
       </run>
     </groups>
     <classes>
-      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest">
+      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors">
         <methods>
-          <include name="whileSignIntoApplicationGivenRightReferralCodePassedTest"/>
-          <include name="whileSignIntoApplicationGivenWrongReferralCodeErrorTest"/>
-          <include name="whileSignIntoApplicationSkipHeardAboutUsDropDwnValueErrorTest"/>
-          <include name="whileSignIntoApplicationExistingPhoneNumberGivenErrorTest"/>
-          <include name="whileSignIntoApplicationSkipNameErrorTest"/>
-          <include name="whileSignIntoApplicationPhoneNumberNotGivenErrorTest"/>
-          <include name="whileSignIntoApplicationEnterMoreThan10NumbersInMobileNumTextFieldErrorTest"/>
-          <include name="whileSignIntoApplicationExistingEmailGivenErrorTest"/>
+          <include name="amConfig"/>
+          <include name="adding50RstoBookingAccountAndClickingOnSuccessButtonPass"/>
+          <include name="entering50RsInWithdrawAmountTextFieldAndClickonWithdraw"/>
+          <include name="entering499RsInWithdrawAmountTextFieldAndClickonWithdraw"/>
+          <include name="withoutGivingAmountInBookingAccountTextFieldAndClickingOnSubmitButton"/>
+          <include name="entering1RsInWithdrawAmountTextFieldAndClickonWithdraw"/>
+          <include name="enteringNegative5RsInWithdrawAmountTextFieldAndClickonWithdraw"/>
+          <include name="bcConfig"/>
+          <include name="acConfig"/>
+          <include name="adding50RstoBookingAccountAndClickingOnFailureButton"/>
+          <include name="adding1RstoBookingAccount"/>
+          <include name="asConfig"/>
+          <include name="bsConfig"/>
+          <include name="entering500RsInWithdrawAmountTextFieldAndClickonWithdraw"/>
+          <include name="bmConfig"/>
         </methods>
-      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SignUpModuleNegativeScenarios_StgTest -->
-      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest">
+      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_BookingAccountErrors -->
+      <class name="S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SchemesErrors_StgTest">
         <methods>
-          <include name="loginByGiving1NumberAsMobileNumberErrorTest"/>
-          <include name="loginByGivingMoreThan12NumbersAsMobileNumberErrorTest"/>
-          <include name="loginByGivingRegisteredMobileNumberPassTest"/>
-          <include name="loginByClickingOnLoginWithGoogleErrorTest"/>
-          <include name="loginByGivingMoreThan14NumbersAsMobileNumberErrorTest"/>
-          <include name="loginByGiving3NumbersAsMobileNumberErrorTest"/>
-          <include name="loginByGivingSpecialCharsAsMobileNumberErrorTest"/>
-          <include name="loginByGivingNotRegisteredMobileNumberErrorTest"/>
-          <include name="loginByGiving10NumbersAs0MobileNumberErrorTest"/>
-          <include name="loginByGiving1stNumberAs0MobileNumberErrorTest"/>
-          <include name="loginByGivingAlreadyRegisteredMobileNumberOTPTest"/>
+          <include name="amConfig"/>
+          <include name="clickingOnStartSubscritionButtonWithOutCheckingIAgreeTermsAndConditionsCheckboxTest"/>
+          <include name="givingInvalidCouponDetailsToSchemesPageTest"/>
+          <include name="bcConfig"/>
+          <include name="acConfig"/>
+          <include name="takingScreenshotofRecentlySubscribedSchemeTest"/>
+          <include name="asConfig"/>
+          <include name="bsConfig"/>
+          <include name="afterSchemeSubscriptionFetchingFailureMsgTest"/>
+          <include name="withoutGivingAnyDetailsInSchemesPageErrorTest"/>
+          <include name="takingScreenshotofRecentlySubscribedSchemeAfterDownlodingTest"/>
+          <include name="clickingOnStartSubscritionButtonByGivingAmountAndCheckingBookingAccountCheckboxTest"/>
+          <include name="bmConfig"/>
+          <include name="afterSchemeSubscriptionFetchingSuccessMsgTest"/>
         </methods>
-      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_LoginErrors_StgTest -->
+      </class> <!-- S2_Negative_Scenarious_for_SignupLoginSchemesDepositAmountSprint_1_Stg.Done_SchemesErrors_StgTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
