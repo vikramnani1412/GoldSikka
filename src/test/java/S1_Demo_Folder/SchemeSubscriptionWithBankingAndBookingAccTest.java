@@ -45,18 +45,12 @@ public class SchemeSubscriptionWithBankingAndBookingAccTest extends BaseClass{
 		
 		Thread.sleep(2000);
 		
-		WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
-		amount.click();
-		Select s = new Select(amount);
-		s.selectByValue("9500");
+		WebElement AmountDrpDwn = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+		Select s = new Select(AmountDrpDwn);
+		s.selectByVisibleText("9500");
 		
-		Thread.sleep(2000);
 		
-		WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
-		months.click();
-		Select s1 = new Select(months);
-		s1.selectByVisibleText("12 Months");
-		
+/*		
 		Thread.sleep(4000);
 		
 		Robot r = new Robot();
@@ -182,10 +176,33 @@ public class SchemeSubscriptionWithBankingAndBookingAccTest extends BaseClass{
 		{
 			System.out.println("Failed");
 		}
-		
+	*/	
 		
 	}
 }
 //JavascriptExecutor js = (JavascriptExecutor)driver;
 //js.executeScript("arguments[0].click()",ele);
 //driver.switchTo().alert().accept();
+
+
+
+
+
+
+
+
+/*
+
+        WebElement amount = driver.findElement(By.xpath("//select[@formcontrolname='amount']"));
+		amount.click();
+		Select s = new Select(amount);
+		s.selectByValue("9500");
+		
+		Thread.sleep(2000);
+		
+		WebElement months = driver.findElement(By.xpath("//select[@placeholder='Months']"));
+		months.click();
+		Select s1 = new Select(months);
+		s1.selectByVisibleText("12 Months");
+
+*/

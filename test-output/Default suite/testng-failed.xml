@@ -6,49 +6,12 @@
       <class name="S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test">
         <methods>
           <include name="amConfig"/>
-          <include name="addressGivingOnlyTitleCityStatePincodeFieldsErrorTest"/>
-          <include name="KycPanDetailsAsSpecialCharsGivenErrorTest"/>
-          <include name="addressGivingOnlyTitleCityStateFieldsErrorTest"/>
-          <include name="bcConfig"/>
-          <include name="nomineeGivingOnlyNamePhNoAddressCityStateCountryDetailsClickOnSubmitErrorTest"/>
-          <include name="nomineeGivingOnlyNameAndPhNoDetailsClickOnSubmitErrorTest"/>
-          <include name="deleteNonPrimaryAccountErrorTest"/>
-          <include name="addressGivingOnlyTitleFieldsErrorTest"/>
-          <include name="AccountMobileNumGiven0ErrorTest"/>
-          <include name="nomineeDeletionErrorTest"/>
-          <include name="nomineeGivingOnlyNamePhNoAddressCityStateDetailsClickOnSubmitErrorTest"/>
-          <include name="AccountEmailNotGivenTextErrorTest"/>
-          <include name="nomineeGivingSpecialCharsInAllFieldsClickOnSubmitErrorTest"/>
-          <include name="enterOnlyFatherNameAndClickOnSubmitOfKYCModuleErrorTest"/>
-          <include name="addressGivingOnlyTitleCityStatePincodeAddressFieldsErrorTest"/>
-          <include name="addingBankAccountByGivingOnlyNameErrorTest"/>
-          <include name="addingBankAccountWithoutGivingAnyDataErrorTest"/>
-          <include name="addressGivingOnlyTitleCityFieldsErrorTest"/>
-          <include name="clickOnTicketsLnkGetSettingsPageErrorTest"/>
-          <include name="nomineeGivingOnlyNamePhNoAddressCityDetailsClickOnSubmitErrorTest"/>
-          <include name="enteringInvalidDataInAllKycFeildsErrorTest"/>
-          <include name="nomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeRelationDetailsClickOnSubmitErrorTest"/>
-          <include name="clickOnSettingsAndNoValuesGivingtoAllAccountFieldsErrorTest"/>
-          <include name="deletingPrimaryBankAccountErrorTest"/>
-          <include name="nomineeGivingAllInvalidDetailsDetailsClickOnSubmitErrorTest"/>
-          <include name="mobileNumberInvalidGivenErrorErrorTest"/>
-          <include name="nomineeWithoutGivingAnyDetailsClickOnSubmitErrorTest"/>
-          <include name="nomineeGivingOnlyNameDetailsClickOnSubmitErrorTest"/>
-          <include name="addingBankAccountByGivingNameAccountNumErrorTest"/>
-          <include name="addressGivingInvalidDetailsToTitleCityStatePincodeAddressFieldsErrorTest"/>
-          <include name="addressWithoutGivingDataInAnyFieldsErrorTest"/>
-          <include name="nomineeGivingOnlyNamePhNoAddressCityStateCountryPincodeDetailsClickOnSubmitErrorTest"/>
-          <include name="clickOnFeedbackLnkGetSettingsPageErrorTest"/>
-          <include name="deletePrimaryAccountErrorTest"/>
-          <include name="nomineeGivingOnlyNamePhNoAddressDetailsClickOnSubmitErrorTest"/>
-          <include name="EmailSpecialCharsGivenErrorTest"/>
-          <include name="clickOnSettingsAndGivingInvalidDetailstoAllAccountFieldsErrorTest"/>
+          <include name="mobileNumberChangingErrorTest"/>
           <include name="acConfig"/>
           <include name="asConfig"/>
           <include name="bsConfig"/>
-          <include name="clearAllKYCFeildDetailsClickOnSubmitErrorTest"/>
-          <include name="AccountNameNotGivenErrorTest"/>
           <include name="bmConfig"/>
+          <include name="bcConfig"/>
         </methods>
       </class> <!-- S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test -->
     </classes>
