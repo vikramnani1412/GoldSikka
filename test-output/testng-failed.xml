@@ -6,12 +6,12 @@
       <class name="S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test">
         <methods>
           <include name="amConfig"/>
-          <include name="mobileNumberChangingErrorTest"/>
           <include name="acConfig"/>
           <include name="asConfig"/>
           <include name="bsConfig"/>
-          <include name="bmConfig"/>
+          <include name="editBankAccountByGivingSpecialCharsAlphanNumericsTest"/>
           <include name="bcConfig"/>
+          <include name="bmConfig"/>
         </methods>
       </class> <!-- S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test -->
     </classes>

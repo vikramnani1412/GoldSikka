@@ -1,4 +1,4 @@
-package S1_Demo_Folder;
+	package S1_Demo_Folder;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;

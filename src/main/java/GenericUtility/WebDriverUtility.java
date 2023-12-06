@@ -289,9 +289,9 @@ public class WebDriverUtility {
 	{
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File sshotType = ts.getScreenshotAs(OutputType.FILE);
-//		File storingFolder = new File(".\\Screenshots\\"+methodName+".png");   //This is to store in eclipse
+		File storingFolder = new File(".\\Screenshots\\"+methodName+".png");   //This is to store in eclipse
 		
-		File storingFolder=new File("\\C:\\Users\\vikra\\OneDrive\\Desktop\\X-YUG All Files\\Eclipse Workspace X_Yug\\Goldsikka  Screenshots\\"+methodName+".png");   //This is to store inside local system
+//		File storingFolder=new File("\\C:\\Users\\vikra\\OneDrive\\Desktop\\X-YUG All Files\\Eclipse Workspace X_Yug\\Goldsikka  Screenshots\\"+methodName+".png");   //This is to store inside local system
 		
 		FileUtils.copyFile(sshotType, storingFolder);
 		return storingFolder.getAbsolutePath();

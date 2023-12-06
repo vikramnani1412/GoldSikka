@@ -49,8 +49,6 @@ public class SchemeSubscriptionWithBankingAndBookingAccTest extends BaseClass{
 		Select s = new Select(AmountDrpDwn);
 		s.selectByVisibleText("9500");
 		
-		
-/*		
 		Thread.sleep(4000);
 		
 		Robot r = new Robot();
@@ -176,7 +174,7 @@ public class SchemeSubscriptionWithBankingAndBookingAccTest extends BaseClass{
 		{
 			System.out.println("Failed");
 		}
-	*/	
+		
 		
 	}
 }

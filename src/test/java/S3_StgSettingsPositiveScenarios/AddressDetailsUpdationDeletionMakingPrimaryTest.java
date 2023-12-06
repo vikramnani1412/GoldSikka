@@ -27,7 +27,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 	
 	@Test(groups = "AddressUpdation" , priority = 1 , invocationCount = 2)
-	public void addressUpdationTest() throws Exception
+	public void addressUpdationTest() throws Exception                                                                   //TC_068
 	{
 		ExcelFileUtility eUtil = new ExcelFileUtility();
 		String Title = eUtil.readDataFromExcel("Settings",23,6);
@@ -137,7 +137,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 	
 	
 		@Test(groups = "AddressUpdation" , priority = 3)
-		public void edtingExistingAddressTest() throws Exception
+		public void edtingExistingAddressTest() throws Exception                                                             //TC_068
 		{
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Title = eUtil.readDataFromExcel("Settings",23,1);
@@ -167,7 +167,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 			driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
 		    
 			Thread.sleep(3000);
-			driver.findElement(By.xpath("(//h5[text()=' Staging '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
+			driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
 			
 			Thread.sleep(3000);
 			WebElement TitleEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Title']"));
@@ -212,7 +212,7 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 		
 		
 		@Test(groups = "AddressUpdation" , priority = 4)
-		public void addressDeletion() throws Exception
+		public void addressDeletionAccept() throws Exception                                                                  //TC_066
 		{
 			ExcelFileUtility eUtil = new ExcelFileUtility();
 			String Title = eUtil.readDataFromExcel("Settings",23,6);
@@ -240,7 +240,52 @@ public class AddressDetailsUpdationDeletionMakingPrimaryTest extends BaseClass{
 			
 			Thread.sleep(3000);
 			driver.switchTo().alert().accept();
-					
+			Assert.fail();
+			
+			try
+			{
+				String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+				System.out.println(SuccessMsg);
+			}
+			catch(Exception e)
+			{
+				System.out.println("Not Deleted");
+				Assert.fail();
+			}
+		}
+		
+		
+		@Test(groups = "AddressUpdation" , priority = 4)
+		public void addressDeletionDismiss() throws Exception                                                                  //TC_066
+		{
+			ExcelFileUtility eUtil = new ExcelFileUtility();
+			String Title = eUtil.readDataFromExcel("Settings",23,6);
+			
+			for(;;)
+			{
+				Thread.sleep(3000);
+			try 
+			{
+				driver.findElement(By.xpath("//span[.='Settings']")).click();
+				break;
+			}
+			catch(Exception e)
+			{
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_DOWN);
+				r.keyRelease(KeyEvent.VK_DOWN);
+			}}
+			
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
+			
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-trash-alt']")).click();
+			
+			Thread.sleep(3000);
+			driver.switchTo().alert().dismiss();
+			Assert.fail();
+			
 			try
 			{
 				String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();

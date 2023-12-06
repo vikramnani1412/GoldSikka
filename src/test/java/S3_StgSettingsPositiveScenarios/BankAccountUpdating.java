@@ -194,8 +194,8 @@ public class BankAccountUpdating extends BaseClass{
 	
 	
 	@Test(groups = "BankAcUpdation" , priority = 3)
-	public void editBankAccountDetails() throws Exception                   // Editing 1st bank account
-	{
+	public void editBankAccountDetails() throws Exception                   // Editing 1st bank account                    //TC_091-093
+	{                                                                                                                      //TC_097
 		ExcelFileUtility eUtil = new ExcelFileUtility();
 		String Name = eUtil.readDataFromExcel("Settings",30,1);
 		String EditName = eUtil.readDataFromExcel("Settings",30,2);
@@ -339,7 +339,7 @@ public class BankAccountUpdating extends BaseClass{
 	
 	
 		@Test(groups = "BankAcUpdation" , priority = 5)
-		public void deleteBankAccountDetails() throws Exception                // Deleting 1st bank account
+		public void deleteBankAccountDetailsAccept() throws Exception                          // Deleting 1st bank account      //TC_094-095
 		{
 			ExcelFileUtility eUtil = new ExcelFileUtility();		
 			String Name = eUtil.readDataFromExcel("Settings",30,1);
@@ -435,7 +435,7 @@ public class BankAccountUpdating extends BaseClass{
 		   }
 		   
 		   
-		   @Test(groups = "BankAcUpdation" , priority = 7)                    //Deleting existing not edited bank account
+		   @Test(groups = "BankAcUpdation" , priority = 7)                    //Deleting existing not edited bank account    //TC_094-095
 			public void deleteingExistingNotEditedBankAccountForNextExecutionDetails() throws Exception
 			{
 				ExcelFileUtility eUtil = new ExcelFileUtility();		
@@ -489,4 +489,60 @@ public class BankAccountUpdating extends BaseClass{
 				}
 				
 		    }
+		   
+		   @Test(groups = "BankAcUpdation" , priority = 5)
+			public void deleteBankAccountDetailsDismiss() throws Exception                          // Deleting 1st bank account      //TC_094-096
+			{
+				ExcelFileUtility eUtil = new ExcelFileUtility();		
+				String Name = eUtil.readDataFromExcel("Settings",30,1);
+				
+				for(;;)
+				{
+					Thread.sleep(3000);
+				try 
+				{
+					driver.findElement(By.xpath("//span[.='Settings']")).click();
+					break;
+				}
+				catch(Exception e)
+				{
+					Robot r = new Robot();
+					r.keyPress(KeyEvent.VK_DOWN);
+					r.keyRelease(KeyEvent.VK_DOWN);
+				}}
+				
+				Thread.sleep(3000);
+				driver.findElement(By.xpath("//a[@href='/settings/bankAccounts']")).click();
+				
+				Thread.sleep(3000);
+				driver.findElement(By.xpath("(//h5[.=' "+Name+"'])[last()]/../following-sibling::div//i[@class='fas fa-trash-alt']")).click();
+			    
+				Thread.sleep(3000);
+				driver.switchTo().alert().dismiss();   //To delete Deleting
+			    			
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
+				
+				try
+				{
+					WebElement Success = driver.findElement(By.xpath("//div[@class='alert alert-success']"));
+					wait.until(ExpectedConditions.visibilityOf(Success));
+					String SuccessMsg = Success.getText();
+					if(SuccessMsg.contains("Success"))
+					{
+					   System.out.println(SuccessMsg);
+					}
+				}
+				catch(Exception e)
+				{
+					WebElement Danger = driver.findElement(By.xpath("//div[@class='alert alert-danger']"));
+					wait.until(ExpectedConditions.visibilityOf(Danger));
+					String DangerMsg = Danger.getText();
+					System.out.println(DangerMsg);
+					Assert.fail();
+				}
+				
+		    }
+		   
+		   
+		   
 }

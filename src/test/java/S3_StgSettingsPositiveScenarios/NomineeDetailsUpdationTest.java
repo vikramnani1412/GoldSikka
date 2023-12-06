@@ -12,7 +12,7 @@ import GenericUtility.BaseClass;
 import GenericUtility.ExcelFileUtility;
 
 @Listeners(GenericUtility.ListnersImplementationClass.class)
-public class NomineeDetailsUpdationTest extends BaseClass {
+public class NomineeDetailsUpdationTest extends BaseClass {                                                                //TC_031-035
 
 	@Test(groups = "NomineeUpdation" , priority = 1)
 	public void accountUpdation() throws Exception

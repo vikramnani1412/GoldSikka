@@ -3,6 +3,7 @@ package S3_StgSettingsNegativeScenarios;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 import javax.swing.border.TitledBorder;
 
@@ -10,7 +11,9 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -96,6 +99,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
 		
 	}
+		                                                                                                                        //TC_09
 		
 		@Test(groups = "SettingsNegative1", priority = 3)              // click On Settings And Giving Null Values Giving to All Fields
 		public void clickOnSettingsAndNoValuesGivingtoAllAccountFieldsErrorTest () throws Exception {
@@ -152,8 +156,9 @@ public class All_Settings_Errors_Test extends BaseClass {
 		
 	}
 		
-        
-		@Test(groups = "SettingsNegative1", priority = 4)     // click On Settings And Giving Invalid Details to Account All Fields--> 1
+                                                                                                                          //    TC_08
+		
+		@Test(groups = "SettingsNegative1", priority = 4)       // click On Settings And Giving Invalid Details to Account All Fields--> 1
 		public void clickOnSettingsAndGivingInvalidDetailstoAllAccountFieldsErrorTest () throws Exception {
 		
 		ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -432,8 +437,9 @@ public class All_Settings_Errors_Test extends BaseClass {
 			System.out.println(SuccessMsg);
 		}
 		  
+		                                                                                                               
 		  
-		  @Test(groups = "SettingsNegative1", priority = 8)         // Email Not Given Error
+		  @Test(groups = "SettingsNegative1", priority = 8)                                                    // Email Not Given Error
 		  public void AccountEmailNotGivenTextErrorTest() throws Exception
 		  {
 			JavaUtility jUtil = new JavaUtility();
@@ -487,6 +493,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 			
 		}
 		  
+		                                                                                                         //    TC_023
 		  
 		  @Test(groups = "SettingsNegative1", priority = 9)                  //Without giving kyc details click on submit error
 		  public void clearAllKYCFeildDetailsClickOnSubmitErrorTest() throws InterruptedException, AWTException
@@ -555,6 +562,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 	         
 	          
 		  }
+		                                                                                                                  // TC_024
 		  
 		  @Test(groups = "SettingsNegative1", priority = 10)           // Giving only father name while adding kyc and click on submit
 		  public void enterOnlyFatherNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
@@ -620,9 +628,9 @@ public class All_Settings_Errors_Test extends BaseClass {
 			  
 		  }
 		  
+		                                                                                                                // Kyc Entire
 		  
-		  
-		  @Test(groups = "SettingsNegative2", priority = 11)        // Entering Invalid Data In All Kyc Feilds and click on submit
+		  @Test(groups = "SettingsNegative2", priority = 11)              // Entering Invalid Data In All Kyc Feilds and click on submit
 		  public void enteringInvalidDataInAllKycFeildsErrorTest()throws Exception
 		  {
 			ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -1250,7 +1258,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		  // Giving Only Invalid Details While Adding Nominee And Click On Submit Error
+		  // Giving Only Invalid Details While Adding Nominee And Click On Submit Error                               //TC_035-036
 		  
 		  @Test(groups = "SettingsNegative3", priority = 22)    
 		  public void nomineeGivingAllInvalidDetailsDetailsClickOnSubmitErrorTest () throws Exception
@@ -1331,7 +1339,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		// Without Giving Any Details While Adding Address And Click On Submit Error
+		// Without Giving Any Details While Adding Address And Click On Submit Error                                  //TC_069
 		  
 		  @Test(groups = "SettingsNegative3", priority = 23)
 		  public void addressWithoutGivingDataInAnyFieldsErrorTest () throws Exception
@@ -1369,7 +1377,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  }
 		  
 		  
-		 // Giving Only Title Details While Adding Address And Click On Submit Error
+		 // Giving Only Title Details While Adding Address And Click On Submit Error                                          //TC_70
 		  
 		  @Test(groups = "SettingsNegative3", priority = 24)
 		  public void addressGivingOnlyTitleFieldsErrorTest () throws Exception
@@ -1620,7 +1628,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  
 		  
 		  
-		  // Giving Invalid Details While Adding Address And Click On Submit Error
+		  // Giving Invalid Details While Adding Address And Click On Submit Error                                         //TC_072
 		  
 		  @Test(groups = "SettingsNegative3", priority = 29)
 		  public void addressGivingInvalidDetailsToTitleCityStatePincodeAddressFieldsErrorTest () throws Exception
@@ -1680,7 +1688,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  
 		  
 		  @Test(groups = "SettingsNegative3", priority = 30)
-		  public void deletePrimaryAccountErrorTest () throws Exception
+		  public void deletePrimaryAccountErrorTest () throws Exception                                               // TC_0105
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				
@@ -1755,7 +1763,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  // Adding Bank Account without giving Any details
 		  
 		  @Test(groups = "SettingsNegative4", priority = 32)
-		  public void addingBankAccountWithoutGivingAnyDataErrorTest () throws Exception
+		  public void addingBankAccountWithoutGivingAnyDataErrorTest () throws Exception                                   //TC_098
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				
@@ -1790,7 +1798,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  // Adding Bank Account without giving Any details
 		  
 		  @Test(groups = "SettingsNegative4", priority = 33)
-		  public void addingBankAccountByGivingOnlyNameErrorTest () throws Exception
+		  public void addingBankAccountByGivingOnlyNameErrorTest () throws Exception                               //TC_099
 		  {
 			  ExcelFileUtility eUtil = new ExcelFileUtility();
 			  String Name = eUtil.readDataFromExcel("Settings", 73, 1);
@@ -1875,7 +1883,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		  // Deleting Primary Bank Account Error
 		  
 		  @Test(groups = "SettingsNegative4", priority = 35)
-		  public void deletingPrimaryBankAccountErrorTest () throws Exception
+		  public void deletingPrimaryBankAccountErrorTest () throws Exception                                                 //TC_103-104-105
 		  {
 			  driver.findElement(By.xpath("//span[.='Schemes']")).click();
 				
@@ -1961,7 +1969,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 			}
 		   
 		   
-		   @Test(groups = "SettingsNegative4", priority = 37)    //Giving Email As Special Chars error
+		   @Test(groups = "SettingsNegative4", priority = 37)    //Giving PanNo As Special Chars error
 		   public void KycPanDetailsAsSpecialCharsGivenErrorTest() throws Exception
 		   {
 			    ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -2116,8 +2124,803 @@ public class All_Settings_Errors_Test extends BaseClass {
 			  }
 		   
 		  
+		    @Test
+			public void clickOnEditClearDataAndClickSubmitWhileEditingAddressTest() throws Exception                      //TC_069                                                       //TC_068
+			{
+				ExcelFileUtility eUtil = new ExcelFileUtility();
+				String Title = eUtil.readDataFromExcel("Settings",23,1);
+								
+				
+				for(;;)
+				{
+					Thread.sleep(3000);
+				try 
+				{
+					driver.findElement(By.xpath("//span[.='Settings']")).click();
+					break;
+				}
+				catch(Exception e)
+				{
+					Robot r = new Robot();
+					r.keyPress(KeyEvent.VK_DOWN);
+					r.keyRelease(KeyEvent.VK_DOWN);
+				}}
+				
+				Thread.sleep(3000);
+				driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
+			    
+				Thread.sleep(3000);
+				driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
+				
+				Thread.sleep(3000);
+				WebElement TitleEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Title']"));
+				TitleEdt.clear();
+				
+				
+				Thread.sleep(3000);
+				WebElement AddressEdt = driver.findElement(By.xpath("//textarea[@placeholder='Enter Address']"));
+				AddressEdt.clear();
+				
+				
+				Thread.sleep(3000);
+				WebElement CityEdt = driver.findElement(By.xpath("//input[@placeholder='Enter city']"));
+				CityEdt.clear();
+				
+				
+				Thread.sleep(3000);
+				WebElement State = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
+				Select s = new Select(State);
+				s.selectByVisibleText("Select State");
+				
+				
+				Thread.sleep(3000);
+				WebElement PincodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']"));
+				PincodeEdt.clear();
+				
+				
+				Thread.sleep(3000);
+				driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+				
+				try
+				{
+					String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+					System.out.println(SuccessMsg);
+				}
+				catch(Exception e)
+				{
+					System.out.println("Address Not Updated Successfully");
+					Assert.fail();
+				}
+
+	    	}
+		    
+		    
+		      @Test                                         // Giving only father name while adding kyc and click on submit       TC_024
+			  public void withoutEnteringFatherNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  {
+				  ExcelFileUtility eUtil = new ExcelFileUtility();
+				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
+				  String SpouseName = eUtil.readDataFromExcel("Settings", 7, 1);
+				  String AlternatePhNo = eUtil.readDataFromExcel("Settings", 8, 1);
+				  String PanNo = eUtil.readDataFromExcel("Settings", 9, 1);
+				  String AadharNo = eUtil.readDataFromExcel("Settings", 10, 1);
+				  
+				  driver.findElement(By.xpath("//span[.='Settings']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//a[@routerlink='/settings/kyc']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//button[.=' Update Kyc ']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  WebElement fatherName = driver.findElement(By.xpath("//input[@placeholder='Enter Father Name']"));
+				  fatherName.clear();
+				  fatherName.sendKeys(FatherName);
+				  
+				  WebElement spouseName = driver.findElement(By.xpath("//input[@placeholder='Enter Spouse Name']"));
+				  spouseName.clear();
+				  
+				  
+				  WebElement alternatePhNo = driver.findElement(By.xpath("//input[@placeholder='Enter Alternate Phone No']"));
+				  alternatePhNo.clear();
+				  
+				  
+				  WebElement panNo = driver.findElement(By.xpath("//input[@placeholder='Enter PAN No']"));
+				  panNo.clear();
+				  
+				  
+				  WebElement aadharNo = driver.findElement(By.xpath("//input[@placeholder='Enter Aadhaar No']"));
+				  aadharNo.clear();
+				  
+				  
+		          driver.findElement(By.xpath("//input[@value='M']")).click();
+		          
+		          Thread.sleep(1000);
+		          
+		          driver.findElement(By.xpath("//button[.='Submit']")).click();
+		          
+		          driver.findElement(By.xpath("abc")).click();
+				  
+			  }
+		   
+		      
+		      @Test                                           // Giving only Spouse name while adding kyc and click on submit   TC_025
+			  public void withoutEnteringSpouseNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  {
+				  ExcelFileUtility eUtil = new ExcelFileUtility();
+				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
+				  String SpouseName = eUtil.readDataFromExcel("Settings", 7, 1);
+				  String AlternatePhNo = eUtil.readDataFromExcel("Settings", 8, 1);
+				  String PanNo = eUtil.readDataFromExcel("Settings", 9, 1);
+				  String AadharNo = eUtil.readDataFromExcel("Settings", 10, 1);
+				  
+				  driver.findElement(By.xpath("//span[.='Settings']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//a[@routerlink='/settings/kyc']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//button[.=' Update Kyc ']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  WebElement fatherName = driver.findElement(By.xpath("//input[@placeholder='Enter Father Name']"));
+				  fatherName.clear();
+				  
+				  WebElement spouseName = driver.findElement(By.xpath("//input[@placeholder='Enter Spouse Name']"));
+				  spouseName.clear();
+				  spouseName.sendKeys(SpouseName);
+				  
+				  WebElement alternatePhNo = driver.findElement(By.xpath("//input[@placeholder='Enter Alternate Phone No']"));
+				  alternatePhNo.clear();
+				  
+				  WebElement panNo = driver.findElement(By.xpath("//input[@placeholder='Enter PAN No']"));
+				  panNo.clear();
+				  
+				  WebElement aadharNo = driver.findElement(By.xpath("//input[@placeholder='Enter Aadhaar No']"));
+				  aadharNo.clear();
+				  
+		          driver.findElement(By.xpath("//input[@value='M']")).click();
+		          
+		          Thread.sleep(1000);
+		          
+		          driver.findElement(By.xpath("//button[.='Submit']")).click();
+		          
+		          driver.findElement(By.xpath("abc")).click();
+				  
+			  }
+		      
+		      
+		      @Test                                         // Giving only PhoneNo while adding kyc and click on submit     TC_026
+			  public void withoutEnteringPhoneNoClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  {
+				  ExcelFileUtility eUtil = new ExcelFileUtility();
+				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
+				  String SpouseName = eUtil.readDataFromExcel("Settings", 7, 1);
+				  String AlternatePhNo = eUtil.readDataFromExcel("Settings", 8, 1);
+				  String PanNo = eUtil.readDataFromExcel("Settings", 9, 1);
+				  String AadharNo = eUtil.readDataFromExcel("Settings", 10, 1);
+				  
+				  driver.findElement(By.xpath("//span[.='Settings']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//a[@routerlink='/settings/kyc']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//button[.=' Update Kyc ']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  WebElement fatherName = driver.findElement(By.xpath("//input[@placeholder='Enter Father Name']"));
+				  fatherName.clear();
+				  
+				  WebElement spouseName = driver.findElement(By.xpath("//input[@placeholder='Enter Spouse Name']"));
+				  spouseName.clear();
+				  
+				  WebElement alternatePhNo = driver.findElement(By.xpath("//input[@placeholder='Enter Alternate Phone No']"));
+				  alternatePhNo.clear();
+				  alternatePhNo.sendKeys(AlternatePhNo);
+				  
+				  WebElement panNo = driver.findElement(By.xpath("//input[@placeholder='Enter PAN No']"));
+				  panNo.clear();
+				  
+				  WebElement aadharNo = driver.findElement(By.xpath("//input[@placeholder='Enter Aadhaar No']"));
+				  aadharNo.clear();
+				  
+		          driver.findElement(By.xpath("//input[@value='M']")).click();
+		          
+		          Thread.sleep(1000);
+		          
+		          driver.findElement(By.xpath("//button[.='Submit']")).click();
+		          
+		          driver.findElement(By.xpath("abc")).click();
+				  
+			  }
 		  
+		      
+		      @Test                                      // Giving only Pan Aadhar details while adding kyc and click on submit   TC_027
+			  public void withoutEnteringPanAndAadharNumsClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  {
+				  ExcelFileUtility eUtil = new ExcelFileUtility();
+				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
+				  String SpouseName = eUtil.readDataFromExcel("Settings", 7, 1);
+				  String AlternatePhNo = eUtil.readDataFromExcel("Settings", 8, 1);
+				  String PanNo = eUtil.readDataFromExcel("Settings", 9, 1);
+				  String AadharNo = eUtil.readDataFromExcel("Settings", 10, 1);
+				  
+				  driver.findElement(By.xpath("//span[.='Settings']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//a[@routerlink='/settings/kyc']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  driver.findElement(By.xpath("//button[.=' Update Kyc ']")).click();
+				  
+				  Thread.sleep(3000);
+				  
+				  WebElement fatherName = driver.findElement(By.xpath("//input[@placeholder='Enter Father Name']"));
+				  fatherName.clear();
+				  
+				  WebElement spouseName = driver.findElement(By.xpath("//input[@placeholder='Enter Spouse Name']"));
+				  spouseName.clear();
+				  
+				  WebElement alternatePhNo = driver.findElement(By.xpath("//input[@placeholder='Enter Alternate Phone No']"));
+				  alternatePhNo.clear();
+				  
+				  WebElement panNo = driver.findElement(By.xpath("//input[@placeholder='Enter PAN No']"));
+				  panNo.clear();
+				  panNo.sendKeys(PanNo);
+				  
+				  WebElement aadharNo = driver.findElement(By.xpath("//input[@placeholder='Enter Aadhaar No']"));
+				  aadharNo.clear();
+				  aadharNo.sendKeys(AadharNo);
+				  
+		          driver.findElement(By.xpath("//input[@value='M']")).click();
+		          
+		          Thread.sleep(1000);
+		          
+		          driver.findElement(By.xpath("//button[.='Submit']")).click();
+		          
+		          driver.findElement(By.xpath("abc")).click();
+				  
+			  }
+		      
+		      
+		      @Test                                                                                                        //TC_036
+			  public void nomineeGivingOnlyNameAddressCityAlphaNumericSpecialCharDetailsClickOnSubmitErrorTest () throws Exception
+			  {
+				  ExcelFileUtility eUtil = new ExcelFileUtility();
+				  String Name = eUtil.readDataFromExcel("Settings", 54, 1);
+				  String PhoneNo = eUtil.readDataFromExcel("Settings", 55, 1);
+				  String Address = eUtil.readDataFromExcel("Settings", 56, 1);
+				  String City = eUtil.readDataFromExcel("Settings", 57, 1);
+				  
+				  driver.findElement(By.xpath("//span[.='Schemes']")).click();
+				
+				  for(;;)
+				  {
+				  try 
+				  {
+					 driver.findElement(By.xpath("//span[.='Settings']")).click();
+					 break;
+				  }
+				  catch(Exception e)
+				  {
+					 Robot r = new Robot();
+					 r.keyPress(KeyEvent.VK_DOWN);
+					 r.keyRelease(KeyEvent.VK_DOWN);
+				   }}
+					
+				   driver.findElement(By.xpath("//span[.='Settings']")).click();
+					
+				   driver.findElement(By.xpath("//a[.=' Nominee Details ']")).click();
+					
+				   Thread.sleep(3000);
+					
+				   driver.findElement(By.xpath("//a[@routerlink='./add']")).click();
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Name']")).sendKeys(Name);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Number']")).sendKeys(PhoneNo);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter Address']")).sendKeys(Address);
+				   
+				   driver.findElement(By.xpath("//input[@placeholder='Enter City']")).sendKeys(City);
+				   
+				   driver.findElement(By.xpath("//button[.='Submit']")).click();
+					
+				   driver.findElement(By.xpath("abc")).click();
+						
+					
+			  }
+		      
+		      
+		        @Test                                                                                                           //TC_069
+				public void edtingExistingAddressWithoutGivingDataClickSubmitTest() throws Exception                                                             //TC_068
+				{
+					ExcelFileUtility eUtil = new ExcelFileUtility();
+					String Title = eUtil.readDataFromExcel("Settings",23,1);
+					String EditTitle = eUtil.readDataFromExcel("Settings",23,2);
+					String EditAddress = eUtil.readDataFromExcel("Settings",24,2);
+					String EditCity = eUtil.readDataFromExcel("Settings",25,2);
+					String EditStateValue = eUtil.readDataFromExcel("Settings",26,2);
+					String EditPinCode = eUtil.readDataFromExcel("Settings",27,2);
+					
+					
+					for(;;)
+					{
+						Thread.sleep(3000);
+					try 
+					{
+						driver.findElement(By.xpath("//span[.='Settings']")).click();
+						break;
+					}
+					catch(Exception e)
+					{
+						Robot r = new Robot();
+						r.keyPress(KeyEvent.VK_DOWN);
+						r.keyRelease(KeyEvent.VK_DOWN);
+					}}
+					
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
+				    
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
+					
+					Thread.sleep(3000);
+					WebElement TitleEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Title']"));
+					TitleEdt.clear();
+					
+					Thread.sleep(3000);
+					WebElement AddressEdt = driver.findElement(By.xpath("//textarea[@placeholder='Enter Address']"));
+					AddressEdt.clear();
+					
+					Thread.sleep(3000);
+					WebElement CityEdt = driver.findElement(By.xpath("//input[@placeholder='Enter city']"));
+					CityEdt.clear();
+					
+					Thread.sleep(3000);
+					WebElement State = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
+					Select s = new Select(State);
+					s.selectByVisibleText("Select State");
+					
+					Thread.sleep(3000);
+					WebElement PincodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']"));
+					PincodeEdt.clear();
+					
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+					
+					try
+					{
+						String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+						System.out.println(SuccessMsg);
+					}
+					catch(Exception e)
+					{
+						System.out.println("Address Not Updated Successfully");
+						Assert.fail();
+					}
+
+		    	}
+		        
+		        
+		        @Test                                                                                                //TC_070
+				public void edtingExistingAddressGivingSingleFieldDataClickSubmitTest() throws Exception                                                             //TC_068
+				{
+					ExcelFileUtility eUtil = new ExcelFileUtility();
+					String Title = eUtil.readDataFromExcel("Settings",23,1);
+					String EditTitle = eUtil.readDataFromExcel("Settings",23,2);
+					String EditAddress = eUtil.readDataFromExcel("Settings",24,2);
+					String EditCity = eUtil.readDataFromExcel("Settings",25,2);
+					String EditStateValue = eUtil.readDataFromExcel("Settings",26,2);
+					String EditPinCode = eUtil.readDataFromExcel("Settings",27,2);
+					
+					
+					for(;;)
+					{
+						Thread.sleep(3000);
+					try 
+					{
+						driver.findElement(By.xpath("//span[.='Settings']")).click();
+						break;
+					}
+					catch(Exception e)
+					{
+						Robot r = new Robot();
+						r.keyPress(KeyEvent.VK_DOWN);
+						r.keyRelease(KeyEvent.VK_DOWN);
+					}}
+					
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
+				    
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
+					
+					Thread.sleep(3000);
+					WebElement TitleEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Title']"));
+					TitleEdt.clear();
+					TitleEdt.sendKeys(EditTitle);
+					
+					Thread.sleep(3000);
+					WebElement AddressEdt = driver.findElement(By.xpath("//textarea[@placeholder='Enter Address']"));
+					AddressEdt.clear();
+					
+					Thread.sleep(3000);
+					WebElement CityEdt = driver.findElement(By.xpath("//input[@placeholder='Enter city']"));
+					CityEdt.clear();
+					
+					Thread.sleep(3000);
+					WebElement State = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
+					Select s = new Select(State);
+					s.selectByVisibleText("Select State");
+					
+					Thread.sleep(3000);
+					WebElement PincodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']"));
+					PincodeEdt.clear();
+					
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+					
+					try
+					{
+						String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+						System.out.println(SuccessMsg);
+					}
+					catch(Exception e)
+					{
+						System.out.println("Address Not Updated Successfully");
+						Assert.fail();
+					}
+
+		    	}
+		        
+		                                                                                                                       //TC_072
+		        @Test
+				public void edtingExistingAddressGivingAlphaNumericsAndSpecialCharsClickSubmitTest() throws Exception                                                             //TC_068
+				{
+					ExcelFileUtility eUtil = new ExcelFileUtility();
+					String Title = eUtil.readDataFromExcel("Settings",23,4);
+					String EditTitle = eUtil.readDataFromExcel("Settings",23,4);
+					String EditAddress = eUtil.readDataFromExcel("Settings",24,4);
+					String EditCity = eUtil.readDataFromExcel("Settings",25,4);
+					String EditStateValue = eUtil.readDataFromExcel("Settings",26,4);
+					String EditPinCode = eUtil.readDataFromExcel("Settings",27,4);
+					
+					
+					for(;;)
+					{
+						Thread.sleep(3000);
+					try 
+					{
+						driver.findElement(By.xpath("//span[.='Settings']")).click();
+						break;
+					}
+					catch(Exception e)
+					{
+						Robot r = new Robot();
+						r.keyPress(KeyEvent.VK_DOWN);
+						r.keyRelease(KeyEvent.VK_DOWN);
+					}}
+					
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("//a[@href='/settings/addresses']")).click();
+				    
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("(//h5[text()=' "+Title+" '])[2]/../following-sibling::div//i[@class='far fa-edit']")).click();
+					
+					Thread.sleep(3000);
+					WebElement TitleEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Title']"));
+					TitleEdt.clear();
+					TitleEdt.sendKeys(EditTitle);
+					
+					Thread.sleep(3000);
+					WebElement AddressEdt = driver.findElement(By.xpath("//textarea[@placeholder='Enter Address']"));
+					AddressEdt.clear();
+					AddressEdt.sendKeys(EditAddress);
+					
+					Thread.sleep(3000);
+					WebElement CityEdt = driver.findElement(By.xpath("//input[@placeholder='Enter city']"));
+					CityEdt.clear();
+					CityEdt.sendKeys(EditCity);
+					
+					Thread.sleep(3000);
+					WebElement State = driver.findElement(By.xpath("//select[@formcontrolname='state_id']"));
+					Select s = new Select(State);
+					s.selectByVisibleText(EditStateValue);
+					
+					Thread.sleep(3000);
+					WebElement PincodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Pincode']"));
+					PincodeEdt.clear();
+					PincodeEdt.sendKeys(EditPinCode);
+					
+					Thread.sleep(3000);
+					driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+					
+					try
+					{
+						String SuccessMsg = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
+						System.out.println(SuccessMsg);
+					}
+					catch(Exception e)
+					{
+						System.out.println("Address Not Updated Successfully");
+						Assert.fail();
+					}
+
+		    	}
+		    
+		        
+		        
+		        @Test                                                                             // Editing without Giving Data    TC_098
+		    	public void editBankAccountWithoutGivingDetailsTest () throws Exception                   
+		    	{                                                                                                                      
+		    		ExcelFileUtility eUtil = new ExcelFileUtility();
+		    		String Name = eUtil.readDataFromExcel("Settings",30,1);
+		    		String EditName = eUtil.readDataFromExcel("Settings",30,2);
+		    		String EditAcNo = eUtil.readDataFromExcel("Settings",31,2);
+		    		String EditBankName = eUtil.readDataFromExcel("Settings",32,2);
+		    		String EditBranch = eUtil.readDataFromExcel("Settings",33,2);
+		    		String EditIfscCode = eUtil.readDataFromExcel("Settings",34,2);
+		    		
+		    		for(;;)
+		    		{
+		    			Thread.sleep(3000);
+		    		try 
+		    		{
+		    			driver.findElement(By.xpath("//span[.='Settings']")).click();
+		    			break;
+		    		}
+		    		catch(Exception e)
+		    		{
+		    			Robot r = new Robot();
+		    			r.keyPress(KeyEvent.VK_DOWN);
+		    			r.keyRelease(KeyEvent.VK_DOWN);
+		    		}}
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("//a[@href='/settings/bankAccounts']")).click();
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("(//h5[.=' "+Name+"'])[last()]/../following-sibling::div//i[@class='far fa-edit']")).click();
+		    		
+		    		Thread.sleep(3000);
+		            WebElement NameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Name on the Account']"));
+		            NameEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement AccountNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Account Number']"));
+		            AccountNoEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement BankNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Bank Name']"));
+		            BankNameEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement BranchNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Branch Name']"));
+		            BranchNameEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		    		WebElement IfscCodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter IFSC Code']"));
+		    		IfscCodeEdt.clear();
+		    		
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+		    		
+		    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));	
+		    		
+		    		Thread.sleep(3000);
+		    		WebElement BankAccountsPage = driver.findElement(By.xpath("//section[contains(@class,'page d')]"));
+		    	    WebElement NewlyAddedBank = driver.findElement(By.xpath("//h5[text()=' "+EditName+"']/../p[.='"+EditAcNo+"']/following-sibling::p[contains(.,'"+EditBankName+"')]/following-sibling::p[.='"+EditIfscCode+"']"));
+		    	    String NewlyAddedBankMsg = NewlyAddedBank.getText();
+		    		wait.until(ExpectedConditions.visibilityOf(BankAccountsPage));
+		    		if(BankAccountsPage.isDisplayed())
+		    		{
+		    			if(NewlyAddedBank.isEnabled())
+		    			{
+		    				System.out.println(NewlyAddedBankMsg+"Successfully Added");
+		    			}
+		    		}
+		    		else 
+		    		{
+		    			System.out.println(NewlyAddedBankMsg+"Bank Account Not Added");
+		    			Assert.fail();
+		    		}
+		    		
+		    
+		    	}
 		  
+		        
+		        
+		        @Test                                                                            // Editing without Giving Data    TC_099
+		    	public void editBankAccountByGivingOneFieldDetailsTest() throws Exception                   
+		    	{                                                                                                                      
+		    		ExcelFileUtility eUtil = new ExcelFileUtility();
+		    		String Name = eUtil.readDataFromExcel("Settings",30,1);
+		    		String EditName = eUtil.readDataFromExcel("Settings",30,2);
+		    		String EditAcNo = eUtil.readDataFromExcel("Settings",31,2);
+		    		String EditBankName = eUtil.readDataFromExcel("Settings",32,2);
+		    		String EditBranch = eUtil.readDataFromExcel("Settings",33,2);
+		    		String EditIfscCode = eUtil.readDataFromExcel("Settings",34,2);
+		    		
+		    		for(;;)
+		    		{
+		    			Thread.sleep(3000);
+		    		try 
+		    		{
+		    			driver.findElement(By.xpath("//span[.='Settings']")).click();
+		    			break;
+		    		}
+		    		catch(Exception e)
+		    		{
+		    			Robot r = new Robot();
+		    			r.keyPress(KeyEvent.VK_DOWN);
+		    			r.keyRelease(KeyEvent.VK_DOWN);
+		    		}}
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("//a[@href='/settings/bankAccounts']")).click();
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("(//h5[.=' "+Name+"'])[last()]/../following-sibling::div//i[@class='far fa-edit']")).click();
+		    		
+		    		Thread.sleep(3000);
+		            WebElement NameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Name on the Account']"));
+		            NameEdt.clear();
+		            NameEdt.sendKeys(EditName);
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement AccountNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Account Number']"));
+		            AccountNoEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement BankNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Bank Name']"));
+		            BankNameEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement BranchNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Branch Name']"));
+		            BranchNameEdt.clear();
+		            
+		    		
+		            Thread.sleep(3000);
+		    		WebElement IfscCodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter IFSC Code']"));
+		    		IfscCodeEdt.clear();
+		    		
+		    		
+		    		Thread.sleep(1000);
+		    		driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+		    		
+		    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));	
+		    		
+		    		Thread.sleep(3000);
+		    		WebElement BankAccountsPage = driver.findElement(By.xpath("//section[contains(@class,'page d')]"));
+		    	    WebElement NewlyAddedBank = driver.findElement(By.xpath("//h5[text()=' "+EditName+"']/../p[.='"+EditAcNo+"']/following-sibling::p[contains(.,'"+EditBankName+"')]/following-sibling::p[.='"+EditIfscCode+"']"));
+		    	    String NewlyAddedBankMsg = NewlyAddedBank.getText();
+		    		wait.until(ExpectedConditions.visibilityOf(BankAccountsPage));
+		    		if(BankAccountsPage.isDisplayed())
+		    		{
+		    			if(NewlyAddedBank.isEnabled())
+		    			{
+		    				System.out.println(NewlyAddedBankMsg+"Successfully Added");
+		    			}
+		    		}
+		    		else 
+		    		{
+		    			System.out.println(NewlyAddedBankMsg+"Bank Account Not Added");
+		    			Assert.fail();
+		    		}
+		    		
+		    
+		    	}     
+		   
+		        
+		        @Test                                                            // Editing AlphaNumerics,SpecialChars Giving Data  TC_101
+		    	public void editBankAccountByGivingSpecialCharsAlphanNumericsTest() throws Exception                             
+		    	{                                                                                                                      
+		    		ExcelFileUtility eUtil = new ExcelFileUtility();
+		    		String Name = eUtil.readDataFromExcel("Settings",23,4);
+		    		String EditName = eUtil.readDataFromExcel("Settings",24,4);
+		    		String EditAcNo = eUtil.readDataFromExcel("Settings",25,4);
+		    		String EditBankName = eUtil.readDataFromExcel("Settings",26,4);
+		    		String EditBranch = eUtil.readDataFromExcel("Settings",27,4);
+		    		String EditIfscCode = eUtil.readDataFromExcel("Settings",28,4);
+		    		
+		    		for(;;)
+		    		{
+		    			Thread.sleep(3000);
+		    		try 
+		    		{
+		    			driver.findElement(By.xpath("//span[.='Settings']")).click();
+		    			break;
+		    		}
+		    		catch(Exception e)
+		    		{
+		    			Robot r = new Robot();
+		    			r.keyPress(KeyEvent.VK_DOWN);
+		    			r.keyRelease(KeyEvent.VK_DOWN);
+		    		}}
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("//a[@href='/settings/bankAccounts']")).click();
+		    		
+		    		Thread.sleep(3000);
+		    		driver.findElement(By.xpath("(//h5[.=' "+Name+"'])[last()]/../following-sibling::div//i[@class='far fa-edit']")).click();
+		    		
+		    		Thread.sleep(3000);
+		            WebElement NameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Name on the Account']"));
+		            NameEdt.clear();
+		            NameEdt.sendKeys(EditName);
+		            
+		    		
+		            Thread.sleep(3000);
+		            WebElement AccountNoEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Account Number']"));
+		            AccountNoEdt.clear();
+		            AccountNoEdt.sendKeys(EditAcNo);
+		    		
+		            Thread.sleep(3000);
+		            WebElement BankNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Bank Name']"));
+		            BankNameEdt.clear();
+		            BankNameEdt.sendKeys(EditBankName);
+		    		
+		            Thread.sleep(3000);
+		            WebElement BranchNameEdt = driver.findElement(By.xpath("//input[@placeholder='Enter Branch Name']"));
+		            BranchNameEdt.clear();
+		            BranchNameEdt.sendKeys(EditBranch);
+		    		
+		            Thread.sleep(3000);
+		    		WebElement IfscCodeEdt = driver.findElement(By.xpath("//input[@placeholder='Enter IFSC Code']"));
+		    		IfscCodeEdt.clear();
+		    		IfscCodeEdt.sendKeys(EditIfscCode);
+		    		
+		    		Thread.sleep(1000);
+		    		driver.findElement(By.xpath("//button[.=' Submit ']")).click();
+		    		
+		    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));	
+		    		
+		    		Thread.sleep(3000);
+		    		WebElement BankAccountsPage = driver.findElement(By.xpath("//section[contains(@class,'page d')]"));
+		    	    WebElement NewlyAddedBank = driver.findElement(By.xpath("//h5[text()=' "+EditName+"']/../p[.='"+EditAcNo+"']/following-sibling::p[contains(.,'"+EditBankName+"')]/following-sibling::p[.='"+EditIfscCode+"']"));
+		    	    String NewlyAddedBankMsg = NewlyAddedBank.getText();
+		    		wait.until(ExpectedConditions.visibilityOf(BankAccountsPage));
+		    		if(BankAccountsPage.isDisplayed())
+		    		{
+		    			if(NewlyAddedBank.isEnabled())
+		    			{
+		    				System.out.println(NewlyAddedBankMsg+"Successfully Added");
+		    			}
+		    		}
+		    		else 
+		    		{
+		    			System.out.println(NewlyAddedBankMsg+"Bank Account Not Added");
+		    			Assert.fail();
+		    		}
+		    		
+		    
+		    	}   
+		        
+		        
+		        
+		     
    }
 	
 	
