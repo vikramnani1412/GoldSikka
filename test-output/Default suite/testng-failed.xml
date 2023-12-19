@@ -9,9 +9,9 @@
           <include name="acConfig"/>
           <include name="asConfig"/>
           <include name="bsConfig"/>
-          <include name="editBankAccountByGivingSpecialCharsAlphanNumericsTest"/>
           <include name="bcConfig"/>
           <include name="bmConfig"/>
+          <include name="editBankAccountByGivingOneFieldDetailsTest"/>
         </methods>
       </class> <!-- S3_StgSettingsNegativeScenarios.All_Settings_Errors_Test -->
     </classes>

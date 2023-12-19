@@ -84,7 +84,7 @@ public class ExcelFileUtility {
 		
 	}
 	
-	public static String[] getSingleColumnData(String filePath, String sheetNamee, int columnIndex) 
+	public static String[] getSingleColumnData(String filePath, String sheetNamee, int columnIndex)
 	{
         String[] dataa = null;
         try 

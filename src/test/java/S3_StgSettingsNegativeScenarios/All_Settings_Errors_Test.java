@@ -2117,19 +2117,21 @@ public class All_Settings_Errors_Test extends BaseClass {
 				   sss.selectByVisibleText(Relation);
 				   
 				   driver.findElement(By.xpath("//button[.='Submit']")).click();
-					
+				   
 				   driver.findElement(By.xpath("abc")).click();
-						
+				   
 					
 			  }
 		   
 		  
+		   
+		   
+		   
 		    @Test
-			public void clickOnEditClearDataAndClickSubmitWhileEditingAddressTest() throws Exception                      //TC_069                                                       //TC_068
+			public void clickOnEditAddressClearDataAndClickSubmitWhileEditingAddressTest() throws Exception                             //TC_069                                                       //TC_068
 			{
 				ExcelFileUtility eUtil = new ExcelFileUtility();
 				String Title = eUtil.readDataFromExcel("Settings",23,1);
-								
 				
 				for(;;)
 				{
@@ -2196,7 +2198,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		    
 		    
 		      @Test                                         // Giving only father name while adding kyc and click on submit       TC_024
-			  public void withoutEnteringFatherNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  public void enteringOnlyFatherNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
 			  {
 				  ExcelFileUtility eUtil = new ExcelFileUtility();
 				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
@@ -2249,7 +2251,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		   
 		      
 		      @Test                                           // Giving only Spouse name while adding kyc and click on submit   TC_025
-			  public void withoutEnteringSpouseNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  public void enteringOnlySpouseNameAndClickOnSubmitOfKYCModuleErrorTest () throws Exception
 			  {
 				  ExcelFileUtility eUtil = new ExcelFileUtility();
 				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
@@ -2298,8 +2300,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 		      
 		      
 		      @Test                                         // Giving only PhoneNo while adding kyc and click on submit     TC_026
-			  public void withoutEnteringPhoneNoClickOnSubmitOfKYCModuleErrorTest () throws Exception
-			  {
+			  public void enteringOnlyPhoneNoClickOnSubmitOfKYCModuleErrorTest () throws Exception
+			  { 
 				  ExcelFileUtility eUtil = new ExcelFileUtility();
 				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
 				  String SpouseName = eUtil.readDataFromExcel("Settings", 7, 1);
@@ -2346,8 +2348,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 			  }
 		  
 		      
-		      @Test                                      // Giving only Pan Aadhar details while adding kyc and click on submit   TC_027
-			  public void withoutEnteringPanAndAadharNumsClickOnSubmitOfKYCModuleErrorTest () throws Exception
+		      @Test                                          // Giving only Pan Aadhar details while adding kyc and click on submit pass   TC_027
+			  public void enteringOnlyPanAndAadharNumsClickOnSubmitOfKYCModuleErrorTest () throws Exception
 			  {
 				  ExcelFileUtility eUtil = new ExcelFileUtility();
 				  String FatherName = eUtil.readDataFromExcel("Settings", 6, 1);
@@ -2376,6 +2378,8 @@ public class All_Settings_Errors_Test extends BaseClass {
 				  
 				  WebElement alternatePhNo = driver.findElement(By.xpath("//input[@placeholder='Enter Alternate Phone No']"));
 				  alternatePhNo.clear();
+				  
+				  Thread.sleep(3000);
 				  
 				  WebElement panNo = driver.findElement(By.xpath("//input[@placeholder='Enter PAN No']"));
 				  panNo.clear();
@@ -2445,7 +2449,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 			  }
 		      
 		      
-		        @Test                                                                                                           //TC_069
+		        @Test                                                                                                                   //TC_069
 				public void edtingExistingAddressWithoutGivingDataClickSubmitTest() throws Exception                                                             //TC_068
 				{
 					ExcelFileUtility eUtil = new ExcelFileUtility();
@@ -2836,7 +2840,7 @@ public class All_Settings_Errors_Test extends BaseClass {
 		        
 		        @Test                                                            // Editing AlphaNumerics,SpecialChars Giving Data  TC_101
 		    	public void editBankAccountByGivingSpecialCharsAlphanNumericsTest() throws Exception                             
-		    	{                                                                                                                      
+		    	{                                                                                                                       
 		    		ExcelFileUtility eUtil = new ExcelFileUtility();
 		    		String Name = eUtil.readDataFromExcel("Settings",23,4);
 		    		String EditName = eUtil.readDataFromExcel("Settings",24,4);
