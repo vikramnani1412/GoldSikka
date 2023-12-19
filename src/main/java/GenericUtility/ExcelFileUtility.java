@@ -78,6 +78,8 @@ public class ExcelFileUtility {
 			{
 				data[i][j]=sh.getRow(i+1).getCell(j).getStringCellValue();
 			}
+			
+			wb.close();
 		}
 		return data;
 		
